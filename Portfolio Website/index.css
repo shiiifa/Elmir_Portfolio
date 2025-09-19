@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.name{
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+
+nav{
+    background-color: black;
+    padding: 15px 0px;
+    margin-bottom: 70px;
+}
+
+#nav-container{
+    /*background-color: rgb(255, 255, 255);*/
+    max-width: 90vw;
+    margin: auto;
+}
+
+#nav-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#right-links a{
+    text-decoration: none;
+    padding-left: 10px;
+    color:#fff
+}
+
+#img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#img #img-cont{
+    width: 300px;
+    border-radius: 50%;
+}
+
+#img #img-cont img{
+    width: 300px;
+    border-radius: 50%;
+}
+
+#Work-cards{
+    width: 90vw;
+    margin: auto;
+}
+
+#work-card-flex{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 40px;
+}
+
+.work-card{
+    width: 350px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.work-card-img img{
+    width:350px;
+}
+
+.work-card-p{
+    padding: 20px;
+}
+
+.work-card-img .imm{
+    object-fit:fill;
+}
