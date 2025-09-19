@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div id="nav-container">
+            <div id="nav-content">
+                <a href="#" class="name">Elmir</a>
+                <div id="right-links">
+                    <a href="./index.html">Home</a>
+                    <a href="#">About</a>
+                    <a href="./works.html">Works</a>
+                    <a href="#">Awards</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div style="display: flex; justify-content: center; margin-bottom: 60px;">
+            <div>
+                <img width="400" src="./img/power.jpeg" alt="">
+            </div>
+        </div>
+
+        <div id="content-cv">
+            <div style="width: 90vw; margin: auto;">
+                <p style="font-size: 25px; text-align: center; margin-bottom: 60px;">
+                    <span style="font-weight: bold;">Research Title:</span>  
+                    Evaluating the Power Consumption of Machine Learning Inference on ARM Cortex-M Microcontrollers
+                </p>
+                <h2>Overview:</h2>
+                <p style="text-align: justify; font-size: 18px; line-height: 28px;">
+                    This research explored the energy cost of running machine learning (ML) inference on resource-constrained ARM Cortex-M microcontrollers. The motivation was to provide embedded ML designers with practical insights into software-hardware trade-offs that affect battery life in IoT and edge AI systems.
+                </p>
+                    <br>
+                    
+                <h2>Problem Statement</h2>
+                <p style="text-align: justify; font-size: 18px; line-height: 28px; padding-bottom: 10px;">
+                    Machine learning inference is increasingly deployed on low-power microcontrollers for IoT and edge applications. However, the high energy cost of running ML algorithms can quickly drain batteries and limit device efficiency. It remains unclear whether optimized libraries like ARM’s CMSIS or custom-written kernels provide better power efficiency across different microcontroller architectures. This project addresses this gap by evaluating and comparing the power consumption of ML inference on ARM Cortex-M microcontrollers.
+                </p>
+                <p style="text-align: justify; font-size: 18px;">
+                    <b>The project compared two ML algorithms:</b>
+                </p>
+                <ul style="padding-left: 40px; padding-bottom: 10px; font-size: 18px;">
+                    <li>
+                        Support Vector Machines (SVMs)
+                    </li>
+                    <li>
+                        Artificial Neural Networks (ANNs)
+                    </li>
+                </ul>
+                <p style="font-size: 18px;">Both algorithms were deployed on two microcontrollers representing opposite ends of the ARM Cortex-M family</p>
+                <br>
+                <p>Two implementation approaches were tested:</p>
+                <ul style="padding-left: 40px; padding-bottom: 15px;">
+                    <li>
+                        <b>FRDM-KL25Z (Cortex-M0+)</b> → ultra-low power, lacks Floating Point Unit (FPU) and SIMD.
+                    </li>
+                    <li>
+                        <b>FRDM-K64F (Cortex-M4)</b>→ higher performance, supports FPU and SIMD instructions.
+                    </li>
+                </ul>
+                <p>Two implementation approaches were tested:</p>
+                <ul style="padding-left: 40px; padding-bottom: 15px;">
+                    <li>
+                        <b>CMSIS libraries</b> (CMSIS-DSP for SVM, CMSIS-NN for ANN).
+                    </li>
+                    <li>
+                        <b>Custom-written kernels in C</b>, optimized for each MCU.
+                    </li>
+                </ul>
+                
+                <h2>⚙️ Methodology</h2>
+                <ol style="padding-left: 40px;">
+                    <li>Model Training & Preparation</li>
+                    <ul style="padding-left: 40px;">
+                        <li>
+                            SVMs trained in Python (Scikit-Learn) with polynomial kernel.
+                        </li>
+                        <li>
+                            ANNs trained in MATLAB, featuring 5 inputs, 2 hidden layers (ReLU), and 1 output layer (Sigmoid).
+                        </li>
+                        <li>
+                            Weights & biases exported and embedded into C programs for inference.
+                        </li>
+                        <li>
+                            CMSIS-NN required quantization (8-bit fixed point) for efficiency.
+                        </li>
+                    </ul>
+                    <li>Testing Procedure</li>
+                    <ul style="padding-left: 40px;">
+                        <li>
+                            Set identical core clock frequency (20.89 MHz) for both MCUs.
+                        </li>
+                        <li>
+                            Measured idle power baseline, then power during inference (continuous loop).
+                        </li>
+                        <li>
+                            Weights & biases exported and embedded into C programs for inference.
+                        </li>
+                        <li>
+                            Subtracted idle consumption to isolate ML workload power.
+                        </li>
+                    </ul>
+                </ol>
+                <br>
+               
+                
+                <h2>📊 Key Results</h2>
+                <p style="text-align: justify; font-size: 18px; line-height: 28px;">Average Power Consumption (after baseline subtraction):</p>
+                <table style="width:100%; border-collapse:collapse; font-family:system-ui, -apple-system, 'Segoe UI', Roboto, Arial;">
+ 
+  <thead>
+    <tr style="background:#f3f4f6; text-align:left;">
+      <th style="padding:8px; border:1px solid #e5e7eb;">MCU (Core)</th>
+      <th style="padding:8px; border:1px solid #e5e7eb;">Algorithm</th>
+      <th style="padding:8px; border:1px solid #e5e7eb;">CMSIS (mW)</th>
+      <th style="padding:8px; border:1px solid #e5e7eb;">Custom (mW)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:8px; border:1px solid #e5e7eb;">KL25Z (M0+)</td>
+      <td style="padding:8px; border:1px solid #e5e7eb;">SVM</td>
+      <td style="padding:8px; border:1px solid #e5e7eb;">8.02</td>
+      <td style="padding:8px; border:1px solid #e5e7eb;">3.59</td>
+    </tr>
+    <tr style="background:#fafafa;">
+      <td style="padding:8px; border:1px solid #e5e7eb;"></td>
+      <td style="padding:8px; border:1px solid #e5e7eb;">ANN</td>
+      <td style="padding:8px; border:1px solid #e5e7eb;">8.24</td>
+      <td style="padding:8px; border:1px solid #e5e7eb;">8.77</td>
+    </tr>
+    <tr>
+      <td style="padding:8px; border:1px solid #e5e7eb;">K64F (M4)</td>
+      <td style="padding:8px; border:1px solid #e5e7eb;">SVM</td>
+      <td style="padding:8px; border:1px solid #e5e7eb;">6.19</td>
+      <td style="padding:8px; border:1px solid #e5e7eb;">24.12</td>
+    </tr>
+    <tr style="background:#fafafa;">
+      <td style="padding:8px; border:1px solid #e5e7eb;"></td>
+      <td style="padding:8px; border:1px solid #e5e7eb;">ANN</td>
+      <td style="padding:8px; border:1px solid #e5e7eb;">5.76</td>
+      <td style="padding:8px; border:1px solid #e5e7eb;">16.12</td>
+    </tr>
+  </tbody>
+</table>
+
+      <br>          
+    <div style="display: flex; justify-content: center;">
+                    <iframe width="550" height="300" 
+    src="https://www.youtube.com/embed/wqm6uzJabBc?mute=1" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+
+
+                    </div>
+                    <br>
+                    
+               <h2 style="padding-bottom: 10px;">Insights:</h2> 
+               <ul style="padding-left: 40px; padding-bottom: 10px; font-size: 18px;">
+                    <li>
+                       <b>On Cortex-M0+ (no FPU/SIMD) →</b> custom kernels were more efficient for SVMs. ANN results were similar between CMSIS and custom.
+                    </li>
+                    <li>
+                       <b>On Cortex-M4 (with FPU & SIMD) → </b>CMSIS libraries significantly reduced power consumption.
+                    </li>
+                    <li>
+                       <b>Conclusion: </b>Use custom kernels on low-end MCUs, but rely on CMSIS libraries on higher-end MCUs with hardware acceleration.
+                    </li>
+                </ul>
+               
+            
+            
+        </div>
+
+    </section>
+</body>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+</html>
