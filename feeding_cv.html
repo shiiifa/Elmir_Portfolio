@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div id="nav-container">
+            <div id="nav-content">
+                <a href="#" class="name">Elmir</a>
+                <div id="right-links">
+                    <a href="./index.html">Home</a>
+                    <a href="#">About</a>
+                    <a href="./works.html">Works</a>
+                    <a href="#">Awards</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div style="display: flex; justify-content: center; margin-bottom: 60px;">
+            <video width="900" height="360" controls autoplay muted loop>
+                <source src="./video/Media2.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div id="content-cv">
+            <div style="width: 90vw; margin: auto;">
+                <p style="font-size: 25px; text-align: center; margin-bottom: 60px;">
+                    <span style="font-weight: bold;">Research Title:</span>  
+                    Real Time Monitoring of Animal Feeding Behaviour Using Computer Vision & Embedded Systems
+                </p>
+                <h2>Overview:</h2>
+                <p style="text-align: justify; font-size: 18px; line-height: 28px;">
+                    This project integrates computer vision (YOLOv8n), embedded systems (Raspberry Pi 4, ESP32), and IoT (MQTT + Firebase) to monitor individual pig feeding behaviour in real time. The system identifies pigs by breed or visual marking, detects entry to the feeding area, measures feeding duration, weighs feed before/after visits (using load cells), and logs per-visit feed consumption and timestamps to a cloud database for time-series analysis.
+                </p>
+                    <br>
+                    <br>
+                <h2>Problem Statement</h2>
+                <p style="text-align: justify; font-size: 18px; line-height: 28px;">
+                    Manual monitoring is labour-intensive and sensor tags are intrusive (biosecurity and welfare issues). Key challenges: reliably identifying individuals (especially same-breed pigs), measuring per-visit feed intake, and building a real-time, farm-robust pipeline that runs on low-cost edge hardware.
+                </p>
+                <ul style="padding-left: 40px;">
+                    <li>
+                        End-to-end system combining vision, ultrasonic triggers, weight sensing (load cells), and MQTT communication.
+                    </li>
+                    <li>
+                        Evaluated three identification/tracking strategies: marking (numbers), centroid tracking, and SORT (Kalman filter + Hungarian matching).
+                    </li>
+                    <li>
+                        Demonstrated high detection performance using YOLOv8n (per-breed accuracies: Landrace 99%, Pietrain 95%, Duroc 97%, Berkshire 96%; mAP ≈ 97%).
+                    </li>
+                    <li>
+                        Practical engineering to improve edge performance (image resize, 1-second sampling) and measured the accuracy/FPS tradeoff.
+                    </li>
+                </ul>
+                <br>
+                <h2>Personal Contributions</h2>
+                <ul style="padding-left: 40px;">
+                    <li>
+                        Led the design and implementation of the system.
+                    </li>
+                    <li>
+                        Developed the computer vision pipeline (YOLOv8n + OpenCV) for pig detection and feeding behavior tracking
+                    </li>
+                    <li>
+                        Integrated ultrasonic sensors and load cells with ESP32 for feed measurement.
+                    </li>
+                    <li>
+                        Set up IoT communication (MQTT) between Raspberry Pi, ESP32, and cloud server.
+                    </li>
+                    <li>
+                        Drafted the research paper, which is under review for IEEE publication (Lead Author).
+                    </li>
+                </ul>
+                <br>
+                <br>
+                <h2>System architecture (three subsystems)</h2>
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <img src="./img/system_architecture.jpg" width="500px" alt="">
+                </div>
+                <p style="text-align: justify; font-size: 18px; line-height: 28px;">1. Feed weight subsystem</p>
+                <ul style="padding-left: 40px;">
+                    <li>
+                        Four 20-kg load cells under feed troughs.
+                    </li>
+                    <li>
+                        ESP32 reads HX711 / load cell ADC.
+                    </li>
+                    <li>                   
+                        Triggered by a pig entry event → capture pre-feed weight (FPA) and post-feed weight (FL).
+                    </li>
+                    <li>
+                        Feed consumed per visit = FPA − FL.
+                    </li>
+                </ul>
+                <br>
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <div>
+                        <img src="./img/schematic.jpg" width="500px" alt="">
+                    </div>
+                    <div>
+                        <img src="./img/pcb.jpg" width="400px" alt="">
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <small style="text-align: center;">Circuit Design & PCB</small>
+                </div>
+                <br>
+                <p style="text-align: justify; font-size: 18px; line-height: 28px;">2. Computer Vision System</p>
+                <ul style="padding-left: 40px;">
+                    <li>
+                        Camera: Raspberry Pi Camera Module 3 (12 MP, IMX708, 120° FOV).
+                    </li>
+                    <li>
+                        Detection model: YOLOv8n (trained/fine-tuned on dataset).
+                    </li>
+                    <li>
+                        Trigger: ultrasonic sensor detects presence within 60 cm → Pi starts 1-second interval captures and inference.
+                    </li>
+                    <li>
+                        Tracking strategies: marking detection, centroid tracking, SORT algorithm.
+                    </li>
+                    <li>
+                        Measures feeding duration by detecting centroid crossing virtual entry line and timing until leaving.
+                    </li>
+                </ul>
+                <br>
+                <p style="text-align: justify; font-size: 18px; line-height: 28px;">3. End-user subsystem</p>
+                <div style="display: flex; justify-content: center;">
+                    <img src="./img/performance.png" width="700px" alt="">
+                </div>
+                <ul style="padding-left: 40px;">
+                    <li>
+                        Raspberry Pi aggregates breed/ID, feeding duration, and weight delta.
+                    </li>
+                    <li>
+                        Data published via MQTT from ESP32 → Pi → cloud; stored in Firebase.
+                    </li>
+                    <li>
+                        Visualized as time-series (grams vs. time) for each pig.
+                    </li>
+            
+                </ul>
+                
+                <br>
+                <h2>Data & model details</h2>
+                <ul style="padding-left: 40px;">
+                    <li>Data captured: Two scenarios</li>
+                    <ul style="padding-left: 40px;">
+                        <li>
+                            Different breeds: 10,676 images (train/test/val split as in paper).
+                        </li>
+                        <li>
+                            Same-breed (three Landrace with numbered markings): 3,386 images.
+                        </li>
+
+                    </ul>
+                    <li><b>YOLOv8n training: </b>350 epochs on Google Colab (Ultralytics).</li>
+                    <li><b>Per-breed validation accuracies:</b>Landrace 99%, Pietrain 95%, Duroc 97%, Berkshire 96% (mAP ≈ 97%)</li>
+                    <li><b>Image size vs FPS on Raspberry Pi: </b></li>
+                    <ul style="padding-left: 40px;">
+                        <li>640×640 → Accuracy 0.97, FPS ≈ 0.8</li>
+                        <li>320×320 → Accuracy 0.96, FPS ≈ 2.1</li>
+                    </ul>
+                     <div style="display: flex; justify-content: center;">
+                    <img src="./img/fps.png" width="200px" alt="">
+                </div>
+                <br>
+                    <li><b>Marking model (Roboflow)</b> for same-breed numbering: mAP ≈ 84.6 (overall).</li>
+                </ul>
+                <br>
+               <div style="display: flex; justify-content: center;">
+                    <img src="./img/fps_rasp.gif" width="400px" alt="">
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <small>Sample Detection on Raspberry Pi 4</small>
+                </div>
+                
+                <h2>Assigning Unique ID to individual Pigs (Tracking approaches)</h2>
+                <ul style="padding-left: 40px;">
+                    <li><b>Marking (numbers):</b> high identification accuracy but intrusive & not scalable (markings fade).</li>
+                    <div style="display: flex; justify-content: center;">
+                    <iframe width="550" height="300" 
+        src="https://www.youtube.com/embed/9gRNzxMdybg?autoplay=1&mute=1&loop=1&playlist=9gRNzxMdybg" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+</iframe>
+
+                    </div>
+                    <br>
+                <li><b>Centroid positional change:</b> non-intrusive, lightweight; prone to ID swap when pigs cluster.</li>
+                <div style="display: flex; justify-content: center;">
+                    <iframe width="550" height="300" 
+        src="https://www.youtube.com/embed/xciat4pTyWA?autoplay=1&mute=1&loop=1&playlist=xciat4pTyWA" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+</iframe>
+
+                    </div>
+                    <br>
+                <li><b>SORT algorithm:</b> Good identity persistence under occlusion/clustering; heavier computationally (Kalman + data association).</li>  
+                    
+                    <div style="display: flex; justify-content: center;">
+                    <iframe width="550" height="300" 
+        src="https://www.youtube.com/embed/PutJVE_0e8Q?autoplay=1&mute=1&loop=1&playlist=PutJVE_0e8Q" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+</iframe>
+
+                    </div>
+                <br>
+                <br>
+               <h2 style="padding-bottom: 30px;">Tracking Feeding Behavior</h2> 
+               
+               <p style="text-align: justify; font-size: 18px; line-height: 28px;">
+                To monitor feeding behavior, the system combines computer vision and sensors. An ultrasonic sensor is placed near the feeding area and detects the presence of an object within a 60 cm range. Once triggered, the sensor activates the computer vision subsystem on the Raspberry Pi to confirm whether the object is a pig and identify its breed.
+                <br>
+                Using OpenCV, virtual lines are drawn across the feeding region. When the centroid of a pig’s bounding box crosses this threshold, the system records the start of feeding. When the pig exits and the centroid crosses back out, the system records the end of feeding. The time difference gives the feeding duration.
+
+At the same time, the feed weighing subsystem (with load cells connected to an ESP32) measures feed levels. Feed weight is captured when the pig enters (FPA) and again when it leaves (FL). The difference provides the feed consumed.
+               </p>
+               <div style="display: flex; justify-content: center; align-items: center;">
+                    <div>
+                        <img src="./img/feeding_arch.png" width="500px" alt="">
+                    </div>
+                    <div>
+                        <img src="./img/feeding_pig.png" width="600px" alt="">
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <iframe width="700" height="450" 
+        src="https://www.youtube.com/embed/x0HBSc9V8H8?autoplay=1&mute=1&loop=1&playlist=x0HBSc9V8H8" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+</iframe>
+
+                    </div>
+            </div>
+            
+        </div>
+
+    </section>
+</body>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+</html>
