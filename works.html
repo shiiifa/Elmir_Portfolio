@@ -16,10 +16,46 @@
                     <a href="#">About</a>
                     <a href="./works.html">Works</a>
                     <a href="#">Awards</a>
+                    <button id="search-btn" style="background: none; border: none; color: #fff; cursor: pointer; padding-left: 10px;">🔍</button>
                 </div>
             </div>
         </div>
     </nav>
+
+    <!-- Search Popup -->
+    <div id="search-popup" class="search-popup">
+        <div class="search-content">
+            <div class="search-header">
+                <h2>Search</h2>
+                <button id="close-search" class="close-btn">&times;</button>
+            </div>
+            <div class="search-input-container">
+                <input type="text" id="search-input" placeholder="Search projects" class="search-input">
+            </div>
+            <div class="search-filters">
+                <span>Filter:</span>
+                <button class="filter-btn" data-filter="research">Research</button>
+                <button class="filter-btn active" data-filter="beyond-lab">Beyond The Lab</button>
+                <button class="filter-btn" data-filter="projects">Projects</button>
+                <button class="filter-btn" data-filter="news">News</button>
+            </div>
+            <div class="search-results">
+                <p class="results-count">10 results found</p>
+                <div class="result-item">
+                    <h3>PUBLIC SPEAKING</h3>
+                    <h4>TEDx Ashesi University Speaker</h4>
+                    <p>Delivered a TEDx talk on quantum physics and self-expression, inspiring students to explore the intersection of science and personal growth.</p>
+                    <span class="result-date">2022</span>
+                </div>
+                <div class="result-item">
+                    <h3>LEADERSHIP</h3>
+                    <h4>Research & Innovation Lead, Arm (E3) NGAGE Ashesi Student Club</h4>
+                    <p>Led engineering projects, fostered research culture, and conducted workshops on embedded systems and machine learning applications.</p>
+                    <span class="result-date">2023 - 2024</span>
+                </div>
+            </div>
+        </div>
+    </div>
     <section id="Work-cards">
         <div id="work-card-container">
             <div id="work-card-flex">
@@ -184,5 +220,62 @@
             </div>
         </div>
     </section> 
+
+    <script>
+        // Search popup functionality
+        const searchBtn = document.getElementById('search-btn');
+        const searchPopup = document.getElementById('search-popup');
+        const closeSearch = document.getElementById('close-search');
+        const searchInput = document.getElementById('search-input');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+
+        // Open search popup
+        searchBtn.addEventListener('click', () => {
+            searchPopup.classList.add('active');
+            searchInput.focus();
+        });
+
+        // Close search popup
+        closeSearch.addEventListener('click', () => {
+            searchPopup.classList.remove('active');
+        });
+
+        // Close popup when clicking outside
+        searchPopup.addEventListener('click', (e) => {
+            if (e.target === searchPopup) {
+                searchPopup.classList.remove('active');
+            }
+        });
+
+        // Close popup with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && searchPopup.classList.contains('active')) {
+                searchPopup.classList.remove('active');
+            }
+        });
+
+        // Filter button functionality
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+
+        // Search functionality (basic implementation)
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const resultItems = document.querySelectorAll('.result-item');
+            
+            resultItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
