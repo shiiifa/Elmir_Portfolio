@@ -86,3 +86,134 @@ grid-row-gap: 40px;
 .work-card-img .imm{
     object-fit:fill;
 }
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: black;
+    flex-direction: column;
+    padding: 20px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.mobile-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 18px;
+    border-bottom: 1px solid #333;
+    transition: background-color 0.3s;
+}
+
+.mobile-menu a:hover {
+    background-color: #333;
+}
+
+.mobile-menu a:last-child {
+    border-bottom: none;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    #right-links {
+        display: none;
+    }
+    
+    .mobile-menu.active {
+        display: flex;
+    }
+    
+    #nav-content {
+        position: relative;
+    }
+    
+    .name {
+        font-size: 32px;
+    }
+    
+    #img #img-cont {
+        width: 250px;
+    }
+    
+    #img #img-cont img {
+        width: 250px;
+    }
+    
+    #me p {
+        width: 90vw !important;
+        font-size: 14px;
+    }
+    
+    #work-card-flex {
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+    }
+    
+    .work-card {
+        width: 90vw;
+        margin: 0 auto;
+    }
+    
+    .work-card-img img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: 28px;
+    }
+    
+    #img #img-cont {
+        width: 200px;
+    }
+    
+    #img #img-cont img {
+        width: 200px;
+    }
+    
+    .mobile-menu a {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
