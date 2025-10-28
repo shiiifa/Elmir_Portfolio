@@ -140,6 +140,10 @@ nav{
     color: #666;
 }
 
+.profile-right #me {
+    margin-bottom: 40px;
+}
+
 .profile-right #me h3 {
     font-size: 24px;
     margin-bottom: 15px;
