@@ -149,10 +149,9 @@ nav{
     margin-bottom: 40px;
 }
 
-.profile-right #me h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #640807;
+.profile-right #me p {
+    color: #555;
+    line-height: 1.6;
 }
 
 /* Footer Styles */
@@ -216,6 +215,27 @@ a {
 }
 
 a:hover {
+    color: #640807;
+    text-decoration: underline;
+}
+
+/* Ensure contact links are also red */
+.contact-item {
+    color: #640807;
+}
+
+.contact-item:hover {
+    color: #640807;
+    text-decoration: underline;
+}
+
+/* Ensure research content links are red */
+.research-item a {
+    color: #640807;
+    text-decoration: none;
+}
+
+.research-item a:hover {
     color: #640807;
     text-decoration: underline;
 }
