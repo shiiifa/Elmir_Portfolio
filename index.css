@@ -185,6 +185,11 @@ nav{
     text-decoration: none;
 }
 
+/* Work card links should remain bold */
+.work-card a {
+    font-weight: bold;
+}
+
 /* Footer Styles */
 footer {
     background-color: transparent;
@@ -279,6 +284,7 @@ a:hover {
 /* Ensure contact links are also red */
 .contact-item {
     color: #640807;
+    font-weight: normal;
 }
 
 .contact-item:hover {
