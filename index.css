@@ -49,11 +49,9 @@ nav{
 
 /* Profile Layout */
 .profile-container {
-    max-width: 1200px;
-    margin: 120px auto 0 auto;
-    padding: 0 20px;
+    margin: 120px 20px 0 320px;
+    padding: 0;
     display: flex;
-    gap: 40px;
 }
 
 .profile-left {
@@ -72,6 +70,8 @@ nav{
 
 .profile-right {
     flex: 1;
+    max-width: 800px;
+    padding-left: 20px;
 }
 
 #img {
