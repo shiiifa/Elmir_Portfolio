@@ -82,17 +82,17 @@ nav{
 }
 
 #img #img-cont {
-    width: 190px;
+    width: 240px;
     border-radius: 50%;
 }
 
 #img #img-cont img {
-    width: 190px;
+    width: 240px;
     border-radius: 50%;
 }
 
 .profile-info h2 {
-    font-size: 22px;
+    font-size: 28px;
     font-weight: bold;
     margin-bottom: 15px;
     color: #333;
@@ -359,11 +359,11 @@ grid-row-gap: 40px;
     }
     
     #img #img-cont {
-        width: 180px;
+        width: 220px;
     }
     
     #img #img-cont img {
-        width: 180px;
+        width: 220px;
     }
     
     .profile-info {
@@ -372,7 +372,7 @@ grid-row-gap: 40px;
     }
     
     .profile-info h2 {
-        font-size: 24px;
+        font-size: 26px;
         margin-bottom: 10px;
         font-weight: bold;
     }
@@ -479,11 +479,11 @@ grid-row-gap: 40px;
     }
     
     #img #img-cont {
-        width: 150px;
+        width: 180px;
     }
     
     #img #img-cont img {
-        width: 150px;
+        width: 180px;
     }
     
     .mobile-menu a {
@@ -492,7 +492,7 @@ grid-row-gap: 40px;
     }
     
     .profile-info h2 {
-        font-size: 20px;
+        font-size: 24px;
     }
     
     .profile-bio {
