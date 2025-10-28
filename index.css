@@ -23,7 +23,7 @@ nav{
 }
 
 #nav-container{
-    /*background-color: rgb(255, 255, 255);*/
+   
     max-width: 90vw;
     margin: auto;
 }
@@ -128,10 +128,25 @@ nav{
     color: #333;
 }
 
-.profile-right #me p {
-    line-height: 1.8;
-    color: #555;
-    text-align: left;
+/* Footer Styles */
+footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    margin-top: 60px;
+    padding: 30px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.footer-content p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
 }
 
 #Work-cards{
@@ -164,7 +179,7 @@ grid-row-gap: 40px;
     object-fit:fill;
 }
 
-/* Hamburger Menu Styles */
+/* hamburger menu functionality*/
 .hamburger {
     display: none;
     flex-direction: column;
@@ -226,7 +241,7 @@ grid-row-gap: 40px;
     border-bottom: none;
 }
 
-/* Mobile Responsive Styles */
+/* mobile responsiveness */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
