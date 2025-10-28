@@ -11,13 +11,14 @@
 
 .name{
     font-family: "Satisfy", cursive;
-    font-weight: 400;
+    font-weight: bold;
     font-style: normal;
     font-size: 40px;
+    color: #640807;
 }
 
 nav{
-    background-color: black;
+    background-color: transparent;
     padding: 15px 0px;
     margin-bottom: 70px;
     position: fixed;
@@ -43,7 +44,8 @@ nav{
 #right-links a{
     text-decoration: none;
     padding-left: 10px;
-    color:#fff
+    color: #640807;
+    font-weight: bold;
 }
 
 /* Profile Layout */
