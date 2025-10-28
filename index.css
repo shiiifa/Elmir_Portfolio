@@ -47,6 +47,11 @@ nav{
     font-weight: bold;
 }
 
+#right-links a:hover {
+    color: #640807;
+    text-decoration: underline;
+}
+
 /* Profile Layout */
 .profile-container {
     margin: 120px 20px 0 390px;
@@ -173,7 +178,7 @@ footer {
 .research-content h2 {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     color: #640807;
     text-align: left;
 }
@@ -194,7 +199,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     font-size: 14px;
     color: #666;
 }
@@ -202,6 +207,17 @@ footer {
 .research-meta span {
     padding: 4px 8px;
     font-weight: 500;
+}
+
+/* Make all links red */
+a {
+    color: #640807;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #640807;
+    text-decoration: underline;
 }
 
 .research-item ul {
