@@ -242,5 +242,27 @@
             <p>&copy; 2025 Elmir Mohammed</p>
         </div>
     </footer>
+    
+    <script>
+        // Make work cards clickable
+        document.addEventListener('DOMContentLoaded', function() {
+            const workCards = document.querySelectorAll('.work-card');
+            
+            workCards.forEach(card => {
+                card.addEventListener('click', function(e) {
+                    // Don't trigger if clicking on links
+                    if (e.target.tagName === 'A' || e.target.closest('a')) {
+                        return;
+                    }
+                    
+                    // Find the "Read More" link in this card
+                    const readMoreLink = card.querySelector('a[href*=".html"]');
+                    if (readMoreLink) {
+                        window.open(readMoreLink.href, '_blank');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
