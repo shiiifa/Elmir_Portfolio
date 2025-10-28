@@ -20,7 +20,6 @@
 nav{
     background-color: transparent;
     padding: 15px 0px;
-    margin-bottom: 70px;
     position: fixed;
     top: 0;
     left: 0;
@@ -51,7 +50,7 @@ nav{
 /* Profile Layout */
 .profile-container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 120px auto 0 auto;
     padding: 0 20px;
     display: flex;
     gap: 40px;
