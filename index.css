@@ -57,13 +57,13 @@ nav{
 }
 
 .profile-left {
-    flex: 0 0 220px;
+    flex: 0 0 180px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     position: sticky;
-    top: 0;
-    height: 100vh;
+    top: 120px;
+    height: calc(100vh - 120px);
     overflow-y: auto;
     padding-right: 10px;
     margin-left: -20px;
@@ -81,12 +81,12 @@ nav{
 }
 
 #img #img-cont {
-    width: 190px;
+    width: 160px;
     border-radius: 50%;
 }
 
 #img #img-cont img {
-    width: 190px;
+    width: 160px;
     border-radius: 50%;
 }
 
