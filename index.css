@@ -375,11 +375,14 @@ grid-row-gap: 40px;
     .contact-links {
         align-items: center;
         justify-content: center;
-        gap: 10px;
+        gap: 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
     
     .contact-item {
         justify-content: center;
+        flex-shrink: 0;
     }
     
     .research-content h2 {
