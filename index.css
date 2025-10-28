@@ -149,7 +149,7 @@ nav{
     margin-bottom: 40px;
 }
 
-.profile-right #me h2 {
+.profile-right #me h3 {
     font-size: 24px;
     margin-bottom: 15px;
     color: #640807;
@@ -199,15 +199,15 @@ footer {
     font-weight: bold;
     margin-bottom: 10px;
     color: #333;
-    display: inline;
-    margin-right: 10px;
 }
 
 .research-meta {
-    display: inline;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 5px;
     font-size: 14px;
     color: #666;
-    margin-bottom: 10px;
 }
 
 .research-meta span {
@@ -469,11 +469,11 @@ grid-row-gap: 40px;
     .research-item h3 {
         font-size: 18px;
         margin-bottom: 8px;
-        display: block;
     }
     
     .research-meta {
-        display: block;
+        flex-direction: column;
+        gap: 5px;
         margin-bottom: 10px;
     }
     
@@ -505,10 +505,6 @@ grid-row-gap: 40px;
         align-items: center;
     }
     
-#me h2 {
-    font-size: 20px;
-}
-
 #me p {
     font-size: 14px;
     max-width: 600px;
