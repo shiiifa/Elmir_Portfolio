@@ -199,7 +199,7 @@
                     // Find the "Read More" link in this card
                     const readMoreLink = card.querySelector('a[href*=".html"]');
                     if (readMoreLink) {
-                        window.open(readMoreLink.href, '_blank');
+                        window.location.href = readMoreLink.href;
                     }
                 });
             });
