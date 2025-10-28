@@ -63,7 +63,7 @@ nav{
     top: 120px;
     left: 20px;
     height: calc(100vh - 120px);
-    overflow-y: auto;
+    overflow-y: visible;
     padding-right: 10px;
     z-index: 100;
 }
@@ -92,7 +92,7 @@ nav{
 }
 
 .profile-info h2 {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 15px;
     color: #333;
@@ -372,7 +372,7 @@ grid-row-gap: 40px;
     }
     
     .profile-info h2 {
-        font-size: 26px;
+        font-size: 22px;
         margin-bottom: 10px;
         font-weight: bold;
     }
@@ -492,7 +492,7 @@ grid-row-gap: 40px;
     }
     
     .profile-info h2 {
-        font-size: 24px;
+        font-size: 20px;
     }
     
     .profile-bio {
