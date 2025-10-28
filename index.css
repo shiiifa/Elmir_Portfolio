@@ -99,7 +99,7 @@ nav{
 }
 
 .profile-bio {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.6;
     color: #666;
     margin-bottom: 30px;
@@ -379,7 +379,7 @@ grid-row-gap: 40px;
     
     .profile-bio {
         text-align: center;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 1.5;
         margin-bottom: 25px;
         max-width: 100%;
