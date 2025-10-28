@@ -383,6 +383,9 @@ grid-row-gap: 40px;
         line-height: 1.5;
         margin-bottom: 25px;
         max-width: 100%;
+        word-wrap: break-word;
+        word-break: break-word;
+        white-space: normal;
     }
     
     .contact-links {
@@ -439,6 +442,10 @@ grid-row-gap: 40px;
     .profile-bio {
         font-size: 14px;
         text-align: center;
+        word-wrap: break-word;
+        word-break: break-word;
+        white-space: normal;
+        max-width: 100%;
     }
     
     .contact-links {
@@ -490,6 +497,10 @@ grid-row-gap: 40px;
     
     .profile-bio {
         font-size: 13px;
+        word-wrap: break-word;
+        word-break: break-word;
+        white-space: normal;
+        max-width: 100%;
     }
     
     .research-content h2 {
