@@ -441,9 +441,11 @@ grid-row-gap: 40px;
         align-items: center;
     }
     
-    #me p {
-        font-size: 14px;
-    }
+#me p {
+    font-size: 14px;
+    max-width: 600px;
+    line-height: 1.6;
+}
     
     #work-card-flex {
         grid-template-columns: 1fr;
