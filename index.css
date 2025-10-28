@@ -104,6 +104,10 @@ nav{
     color: #666;
     margin-bottom: 30px;
     text-align: left;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    max-width: 100%;
 }
 
 .contact-links {
