@@ -149,6 +149,13 @@ nav{
     margin-bottom: 40px;
 }
 
+.profile-right #me h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #640807;
+    font-weight: bold;
+}
+
 .profile-right #me p {
     color: #555;
     line-height: 1.6;
@@ -192,15 +199,15 @@ footer {
     font-weight: bold;
     margin-bottom: 10px;
     color: #333;
+    display: inline;
+    margin-right: 10px;
 }
 
 .research-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 5px;
+    display: inline;
     font-size: 14px;
     color: #666;
+    margin-bottom: 10px;
 }
 
 .research-meta span {
@@ -462,11 +469,11 @@ grid-row-gap: 40px;
     .research-item h3 {
         font-size: 18px;
         margin-bottom: 8px;
+        display: block;
     }
     
     .research-meta {
-        flex-direction: column;
-        gap: 5px;
+        display: block;
         margin-bottom: 10px;
     }
     
@@ -498,6 +505,10 @@ grid-row-gap: 40px;
         align-items: center;
     }
     
+#me h2 {
+    font-size: 20px;
+}
+
 #me p {
     font-size: 14px;
     max-width: 600px;
