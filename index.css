@@ -54,6 +54,11 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding-right: 20px;
 }
 
 .profile-right {
@@ -316,47 +321,80 @@ grid-row-gap: 40px;
     .profile-container {
         flex-direction: column;
         padding: 0 15px;
+        gap: 20px;
     }
     
     .profile-left {
         flex: 1;
         width: 100%;
         align-items: center;
+        text-align: center;
+        position: static;
+        height: auto;
+        overflow-y: visible;
+        padding-right: 0;
     }
     
     .profile-right {
         width: 100%;
     }
     
+    #img {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    .profile-info {
+        text-align: center;
+    }
+    
+    .profile-info h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    
+    .profile-bio {
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    .contact-links {
+        align-items: center;
+        justify-content: center;
+    }
+    
     .research-content h2 {
         font-size: 24px;
-        text-align: center;
+        text-align: left;
+        margin-bottom: 20px;
     }
     
     .research-item {
         margin-bottom: 25px;
-        padding: 15px;
+        padding: 15px 0;
     }
     
     .research-item h3 {
         font-size: 18px;
+        margin-bottom: 8px;
     }
     
     .research-meta {
         flex-direction: column;
-        gap: 8px;
+        gap: 5px;
+        margin-bottom: 10px;
     }
     
     .research-meta span {
         font-size: 12px;
+        background: none;
+        padding: 0;
     }
     
     .research-item li {
         font-size: 14px;
-    }
-    
-    #img {
-        justify-content: center;
+        margin-bottom: 6px;
     }
     
     #img #img-cont {
@@ -417,10 +455,22 @@ grid-row-gap: 40px;
     }
     
     .profile-info h2 {
-        font-size: 24px;
+        font-size: 20px;
     }
     
     .profile-bio {
-        font-size: 14px;
+        font-size: 13px;
+    }
+    
+    .research-content h2 {
+        font-size: 20px;
+    }
+    
+    .research-item h3 {
+        font-size: 16px;
+    }
+    
+    .research-item li {
+        font-size: 13px;
     }
 }
