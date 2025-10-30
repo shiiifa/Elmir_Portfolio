@@ -45,11 +45,14 @@ nav{
     padding: 0 15px;
     color: #640807;
     font-weight: bold;
+    transition: transform 0.3s ease;
+    display: inline-block;
 }
 
 #right-links a:hover {
     color: #640807;
-    text-decoration: underline;
+    text-decoration: none;
+    transform: translateY(-3px);
 }
 
 /* Profile Layout */
