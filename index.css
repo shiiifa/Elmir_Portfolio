@@ -19,7 +19,7 @@
 
 nav{
     background-color: #FFFFFF;
-    padding: 15px 0px;
+    padding: 15px 0px 18px 0px;
     position: fixed;
     top: 0;
     left: 0;
@@ -47,12 +47,25 @@ nav{
     font-weight: bold;
     transition: transform 0.3s ease;
     display: inline-block;
+    position: relative;
 }
 
 #right-links a:hover {
     color: #640807;
     text-decoration: none;
     transform: translateY(-3px);
+}
+
+#right-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: #640807;
+    border-radius: 50%;
 }
 
 /* Profile Layout */
