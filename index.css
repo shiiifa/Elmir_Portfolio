@@ -340,6 +340,32 @@ a:hover {
     margin-left: 5px;
 }
 
+/* Center headings and videos on project pages */
+#content-cv h2 {
+    text-align: center;
+}
+
+section h2 {
+    text-align: center;
+}
+
+/* Center videos and iframes on project pages */
+#content-cv video,
+#content-cv iframe,
+section video,
+section iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#profile video,
+#profile iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #Work-cards{
     width: 100%;
     max-width: 800px;
