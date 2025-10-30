@@ -74,7 +74,7 @@
                 <h1 style="color: #640807; text-align: center; font-size: 36px; margin-bottom: 50px; font-weight: bold;">Awards & Recognitions</h1>
                 <div style="margin-bottom: 60px; display: flex; gap: 30px; align-items: flex-start;">
                     <div style="flex: 1;">
-                        <h3 style="color: #640807; font-size: 24px; margin-bottom: 20px; text-align: left;">Most Innovative Capstone Project</h3>
+                        <h3 style="color: #640807; font-size: 24px; margin-bottom: 20px; text-align: left;">Recipient of Most Innovative Capstone Project Award - Engineering Department</h3>
                         <p style="text-align: justify; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
                             Most innovative capstone project in the Engineering Department.
                         </p>
@@ -91,7 +91,7 @@
 
                 <div style="margin-bottom: 60px; display: flex; gap: 30px; align-items: flex-start;">
                     <div style="flex: 1;">
-                        <h3 style="color: #640807; font-size: 24px; margin-bottom: 20px; text-align: left;">Cum Laude Honors</h3>
+                        <h3 style="color: #640807; font-size: 24px; margin-bottom: 20px; text-align: left;">Recipient of Class of 2024 Cum Laude honours Award (top 10%)</h3>
                         <p style="text-align: justify; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
                             Class Cum Laude honours Award (top 10%)
                         </p>
@@ -110,6 +110,9 @@
                         <p style="text-align: justify; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
                             Gold Medal for research in designing biosensor for detecting lithium and gold pathfinders. A research looking at sustainable mining. West Africa's first gold medal at the grand iGEM jamboree conference in Paris, France.
                         </p>
+                        <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
+                            <a href="https://www.linkedin.com/posts/elmir-mohammed-82b9201b7_syntheticbiology-innovation-teamwork-activity-7142701881675489280-_P4K?utm_source=share&utm_medium=member_desktop&rcm=ACoAADKBAqMBxaTmLIiZU3KWj9Fk5Bk2BLN-CGY" style="background-color: #640807; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; width: fit-content; text-align: center;">LinkedIn Post - iGEM Gold Medal Journey</a>
+                        </div>
                     </div>
                     <div style="flex: 1; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px;">
                         <img src="./img/igem1.png" width="200px" alt="iGEM 1" style="max-width: 100%; height: auto;">
@@ -163,6 +166,49 @@
                 }
             });
         });
+
+        // Modal functionality
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeBtn = document.getElementsByClassName('close')[0];
+        const awardImages = document.querySelectorAll('.award-image');
+
+        // Make award images clickable
+        awardImages.forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', function() {
+                modal.style.display = 'block';
+                modalImage.src = this.src;
+                modalImage.alt = this.alt;
+            });
+        });
+
+        // Close modal when clicking the X
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside the image
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.style.display === 'block') {
+                modal.style.display = 'none';
+            }
+        });
     </script>
+
+    <!-- Modal for image viewing -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" class="modal-image" src="" alt="">
+        </div>
+    </div>
 </body>
 </html>
