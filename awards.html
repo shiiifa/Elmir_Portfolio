@@ -21,6 +21,18 @@
                     <a href="./awards.html">Awards</a>
                     <a href="./Resume_Elmir.pdf">CV</a>
                 </div>
+                <button id="hamburger-menu" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div id="mobile-menu" class="mobile-menu">
+                <a href="./index.html">Home</a>
+                <a href="./research.html">Academics and Research</a>
+                <a href="./works.html">Works</a>
+                <a href="./awards.html">Awards</a>
+                <a href="./Resume_Elmir.pdf">CV</a>
             </div>
         </div>
     </nav>
@@ -200,6 +212,35 @@
             if (e.key === 'Escape' && modal.style.display === 'block') {
                 modal.style.display = 'none';
             }
+        });
+    </script>
+    <script>
+        // Hamburger menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+            
+            // Close menu when clicking on a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)) {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                }
+            });
         });
     </script>
 
