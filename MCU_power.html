@@ -74,7 +74,7 @@
     <section id="profile">
         <div class="profile-container">
             <div class="profile-right">
-                <h1 style="color: #640807; text-align: center; font-size: 32px; margin-bottom: 40px; font-weight: bold;">Evaluating the Power Consumption of Machine Learning<br>Inference on ARM Cortex-M Microcontrollers</h1>
+                <h1 style="color: #640807; text-align: center; font-size: 32px; margin-top: 40px; margin-bottom: 40px; font-weight: bold;">Evaluating the Power Consumption of Machine Learning<br>Inference on ARM Cortex-M Microcontrollers</h1>
                 
                 <div style="display: flex; gap: 30px; align-items: flex-start; margin-bottom: 60px; flex-wrap: wrap;">
                     <div style="flex: 0 0 auto;">
@@ -94,7 +94,7 @@
             <div style="width: 80%; max-width: 800px; margin: auto;">
                     <br>
                     
-                <h2 style="color: #640807;">Problem Statement</h2>
+                <h2 style="color: #640807; margin-top: 40px;">Problem Statement</h2>
                 <p style="text-align: justify; font-size: 18px; line-height: 28px; color: #666; margin-bottom: 20px;">
                     Machine learning inference is increasingly deployed on low-power microcontrollers for IoT and edge applications. However, the high energy cost of running ML algorithms can quickly drain batteries and limit device efficiency. It remains unclear whether optimized libraries like ARM's CMSIS or custom-written kernels provide better power efficiency across different microcontroller architectures. This project addresses this gap by evaluating and comparing the power consumption of ML inference on ARM Cortex-M microcontrollers.
                 </p>
@@ -114,13 +114,10 @@
                 <p style="font-size: 18px; color: #666; margin-bottom: 10px;">Two implementation approaches were tested:</p>
                 <ul style="padding-left: 40px; margin-bottom: 20px; font-size: 18px; color: #666;">
                     <li style="margin-bottom: 10px;">
-                        <b style="color: #666;">FRDM-KL25Z (Cortex-M0+)</b><br>
-                        ultra-low power, lacks<br>
-                        Floating Point Unit (FPU) and SIMD.
+                        <b style="color: #666;">FRDM-KL25Z (Cortex-M0+)</b> ultra-low power, lacks Floating Point Unit (FPU) and SIMD.
                     </li>
                     <li style="margin-bottom: 10px;">
-                        <b style="color: #666;">FRDM-K64F (Cortex-M4)</b><br>
-                        higher performance, supports FPU and SIMD instructions.
+                        <b style="color: #666;">FRDM-K64F (Cortex-M4)</b> higher performance, supports FPU and SIMD instructions.
                     </li>
                 </ul>
                 
@@ -134,10 +131,10 @@
                     </li>
                 </ul>
                 
-                <h2 style="color: #640807;">Methodology</h2>
-                <ol style="padding-left: 40px; color: #666;">
-                    <li style="margin-bottom: 10px; color: #666;">Model Training & Preparation</li>
-                    <ul style="padding-left: 40px; margin-bottom: 15px; color: #666;">
+                <h2 style="color: #640807; margin-top: 40px;">Methodology</h2>
+                <div style="padding-left: 40px; color: #666;">
+                    <p style="font-weight: bold; font-size: 18px; color: #666; margin-top: 20px; margin-bottom: 10px; text-align: left;">Model Training & Preparation</p>
+                    <ul style="padding-left: 40px; margin-bottom: 20px; font-size: 18px; color: #666;">
                         <li style="margin-bottom: 5px;">
                             SVMs trained in Python (Scikit-Learn) with polynomial kernel.
                         </li>
@@ -151,8 +148,8 @@
                             CMSIS-NN required quantization (8-bit fixed point) for efficiency.
                         </li>
                     </ul>
-                    <li style="margin-bottom: 10px; color: #666;">Testing Procedure</li>
-                    <ul style="padding-left: 40px; margin-bottom: 15px; color: #666;">
+                    <p style="font-weight: bold; font-size: 18px; color: #666; margin-top: 20px; margin-bottom: 10px; text-align: left;">Testing Procedure</p>
+                    <ul style="padding-left: 40px; margin-bottom: 20px; font-size: 18px; color: #666;">
                         <li style="margin-bottom: 5px;">
                             Set identical core clock frequency (20.89 MHz) for both MCUs.
                         </li>
@@ -166,11 +163,11 @@
                             Subtracted idle consumption to isolate ML workload power.
                         </li>
                     </ul>
-                </ol>
+                </div>
                 <br>
                
                 
-                <h2 style="color: #640807;">Key Results</h2>
+                <h2 style="color: #640807; margin-top: 40px;">Key Results</h2>
                 <p style="text-align: justify; font-size: 18px; line-height: 28px; color: #666; margin-bottom: 15px;">Average Power Consumption (after baseline subtraction):</p>
                 <table style="width:100%; border-collapse:collapse; font-family:system-ui, -apple-system, 'Segoe UI', Roboto, Arial; color: #666;">
  
@@ -224,7 +221,7 @@
                     </div>
                     <br>
                     
-               <h2 style="color: #640807; padding-bottom: 10px;">Insights:</h2> 
+               <h2 style="color: #640807; margin-top: 40px; padding-bottom: 10px;">Insights</h2> 
                <ul style="padding-left: 40px; padding-bottom: 10px; font-size: 18px; color: #666;">
                     <li style="margin-bottom: 5px;">
                        <b style="color: #666;">On Cortex-M0+ (no FPU/SIMD) →</b> custom kernels were more efficient for SVMs. ANN results were similar between CMSIS and custom.
