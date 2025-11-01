@@ -130,7 +130,11 @@ nav{
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 15px;
+    margin-left: 0;
+    margin-top: 0;
+    padding-left: 0;
     color: #333;
+    text-align: left;
 }
 
 .profile-bio {
@@ -138,6 +142,9 @@ nav{
     line-height: 1.6;
     color: #666;
     margin-bottom: 30px;
+    margin-left: 0;
+    margin-top: 0;
+    padding-left: 0;
     text-align: left;
     word-wrap: break-word;
     word-break: break-word;
@@ -218,6 +225,17 @@ nav{
 /* Work card links should remain bold */
 .work-card a {
     font-weight: bold;
+}
+
+/* Work card action buttons */
+.work-card-p a[style*="background-color: #640807"] {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.work-card-p a[style*="background-color: #640807"]:hover {
+    background-color: #4a0606 !important;
+    transform: translateY(-2px);
+    text-decoration: none;
 }
 
 /* Footer Styles */
