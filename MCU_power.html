@@ -35,7 +35,7 @@
         #content-cv ol,
         #content-cv td,
         #content-cv th {
-            color: #666 !important;
+            color: #555 !important;
         }
         #content-cv h2 {
             color: #640807 !important;
@@ -81,10 +81,10 @@
                         <img width="600" src="./img/power.jpeg" alt="" style="display: block;">
                     </div>
                     <div style="flex: 1; min-width: 300px;">
-                        <p style="text-align: justify; font-size: 18px; line-height: 28px; margin: 0 0 20px 0; color: #666;">
+                        <p style="text-align: justify; font-size: 18px; line-height: 28px; margin: 0 0 20px 0; color: #555;">
                             This research explored the energy cost of running machine learning (ML) inference on resource-constrained ARM Cortex-M microcontrollers.
                         </p>
-                        <p style="text-align: justify; font-size: 18px; line-height: 28px; margin: 0; color: #666;">
+                        <p style="text-align: justify; font-size: 18px; line-height: 28px; margin: 0; color: #555;">
                             The motivation was to provide embedded ML designers with practical insights into software-hardware trade-offs that affect battery life in IoT and edge AI systems.
                         </p>
                     </div>
@@ -95,13 +95,13 @@
                     <br>
                     
                 <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Problem Statement</h2>
-                <p style="text-align: justify; font-size: 18px; line-height: 28px; color: #666; margin-bottom: 20px;">
+                <p style="text-align: justify; font-size: 18px; line-height: 28px; color: #555; margin-bottom: 20px;">
                     Machine learning inference is increasingly deployed on low-power microcontrollers for IoT and edge applications. However, the high energy cost of running ML algorithms can quickly drain batteries and limit device efficiency. It remains unclear whether optimized libraries like ARM's CMSIS or custom-written kernels provide better power efficiency across different microcontroller architectures. This project addresses this gap by evaluating and comparing the power consumption of ML inference on ARM Cortex-M microcontrollers.
                 </p>
-                <p style="text-align: justify; font-size: 18px; line-height: 28px; color: #666; margin-bottom: 10px;">
+                <p style="text-align: justify; font-size: 18px; line-height: 28px; color: #555; margin-bottom: 10px;">
                     The project compared two ML algorithms:
                 </p>
-                <ul style="padding-left: 40px; margin-bottom: 20px; font-size: 18px; line-height: 28px; color: #666;">
+                <ul style="padding-left: 40px; margin-bottom: 20px; font-size: 18px; line-height: 28px; color: #555;">
                     <li style="margin-bottom: 5px;">
                         Support Vector Machines (SVMs)
                     </li>
@@ -109,32 +109,32 @@
                         Artificial Neural Networks (ANNs)
                     </li>
                 </ul>
-                <p style="font-size: 18px; line-height: 28px; color: #666; margin-bottom: 20px;">Both algorithms were deployed on two microcontrollers representing opposite ends of the ARM Cortex-M family</p>
+                <p style="font-size: 18px; line-height: 28px; color: #555; margin-bottom: 20px;">Both algorithms were deployed on two microcontrollers representing opposite ends of the ARM Cortex-M family</p>
                 
-                <p style="font-size: 18px; line-height: 28px; color: #666; margin-bottom: 10px;">Two implementation approaches were tested:</p>
-                <ul style="padding-left: 40px; margin-bottom: 20px; font-size: 18px; line-height: 28px; color: #666;">
+                <p style="font-size: 18px; line-height: 28px; color: #555; margin-bottom: 10px;">Two implementation approaches were tested:</p>
+                <ul style="padding-left: 40px; margin-bottom: 20px; font-size: 18px; line-height: 28px; color: #555;">
                     <li style="margin-bottom: 10px;">
-                        <b style="color: #666;">FRDM-KL25Z (Cortex-M0+)</b> ultra-low power, lacks Floating Point Unit (FPU) and SIMD.
+                        <b style="color: #555;">FRDM-KL25Z (Cortex-M0+)</b> ultra-low power, lacks Floating Point Unit (FPU) and SIMD.
                     </li>
                     <li style="margin-bottom: 10px;">
-                        <b style="color: #666;">FRDM-K64F (Cortex-M4)</b> higher performance, supports FPU and SIMD instructions.
+                        <b style="color: #555;">FRDM-K64F (Cortex-M4)</b> higher performance, supports FPU and SIMD instructions.
                     </li>
                 </ul>
                 
-                <p style="font-size: 18px; line-height: 28px; color: #666; margin-bottom: 10px;">Two implementation approaches were tested:</p>
-                <ul style="padding-left: 40px; margin-bottom: 20px; font-size: 18px; line-height: 28px; color: #666;">
+                <p style="font-size: 18px; line-height: 28px; color: #555; margin-bottom: 10px;">Two implementation approaches were tested:</p>
+                <ul style="padding-left: 40px; margin-bottom: 20px; font-size: 18px; line-height: 28px; color: #555;">
                     <li style="margin-bottom: 5px;">
-                        <b style="color: #666;">CMSIS libraries</b> (CMSIS-DSP for SVM, CMSIS-NN for ANN).
+                        <b style="color: #555;">CMSIS libraries</b> (CMSIS-DSP for SVM, CMSIS-NN for ANN).
                     </li>
                     <li style="margin-bottom: 5px;">
-                        <b style="color: #666;">Custom-written kernels in C</b>, optimized for each MCU.
+                        <b style="color: #555;">Custom-written kernels in C</b>, optimized for each MCU.
                     </li>
                 </ul>
                 
                 <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Methodology</h2>
-                <div style="padding-left: 40px; color: #666;">
-                    <p style="font-weight: bold; font-size: 18px; line-height: 28px; color: #666; margin-top: 20px; margin-bottom: 10px; text-align: left;">Model Training & Preparation</p>
-                    <ul style="padding-left: 40px; margin-bottom: 20px; font-size: 18px; line-height: 28px; color: #666;">
+                <div style="padding-left: 40px; color: #555;">
+                    <p style="font-weight: bold; font-size: 18px; line-height: 28px; color: #555; margin-top: 20px; margin-bottom: 10px; text-align: left;">Model Training & Preparation</p>
+                    <ul style="padding-left: 40px; margin-bottom: 20px; font-size: 18px; line-height: 28px; color: #555;">
                         <li style="margin-bottom: 5px;">
                             SVMs trained in Python (Scikit-Learn) with polynomial kernel.
                         </li>
@@ -148,8 +148,8 @@
                             CMSIS-NN required quantization (8-bit fixed point) for efficiency.
                         </li>
                     </ul>
-                    <p style="font-weight: bold; font-size: 18px; line-height: 28px; color: #666; margin-top: 20px; margin-bottom: 10px; text-align: left;">Testing Procedure</p>
-                    <ul style="padding-left: 40px; margin-bottom: 20px; font-size: 18px; line-height: 28px; color: #666;">
+                    <p style="font-weight: bold; font-size: 18px; line-height: 28px; color: #555; margin-top: 20px; margin-bottom: 10px; text-align: left;">Testing Procedure</p>
+                    <ul style="padding-left: 40px; margin-bottom: 20px; font-size: 18px; line-height: 28px; color: #555;">
                         <li style="margin-bottom: 5px;">
                             Set identical core clock frequency (20.89 MHz) for both MCUs.
                         </li>
@@ -168,41 +168,41 @@
                
                 
                 <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Key Results</h2>
-                <p style="text-align: justify; font-size: 18px; line-height: 28px; color: #666; margin-bottom: 15px;">Average Power Consumption (after baseline subtraction):</p>
-                <table style="width:100%; border-collapse:collapse; font-family:system-ui, -apple-system, 'Segoe UI', Roboto, Arial; color: #666;">
+                <p style="text-align: justify; font-size: 18px; line-height: 28px; color: #555; margin-bottom: 15px;">Average Power Consumption (after baseline subtraction):</p>
+                <table style="width:100%; border-collapse:collapse; font-family:system-ui, -apple-system, 'Segoe UI', Roboto, Arial; color: #555;">
  
   <thead>
     <tr style="background:#f3f4f6; text-align:left;">
-      <th style="padding:8px; border:1px solid #e5e7eb; color: #666;">MCU (Core)</th>
-      <th style="padding:8px; border:1px solid #e5e7eb; color: #666;">Algorithm</th>
-      <th style="padding:8px; border:1px solid #e5e7eb; color: #666;">CMSIS (mW)</th>
-      <th style="padding:8px; border:1px solid #e5e7eb; color: #666;">Custom (mW)</th>
+      <th style="padding:8px; border:1px solid #e5e7eb; color: #555;">MCU (Core)</th>
+      <th style="padding:8px; border:1px solid #e5e7eb; color: #555;">Algorithm</th>
+      <th style="padding:8px; border:1px solid #e5e7eb; color: #555;">CMSIS (mW)</th>
+      <th style="padding:8px; border:1px solid #e5e7eb; color: #555;">Custom (mW)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="padding:8px; border:1px solid #e5e7eb; color: #666;">KL25Z (M0+)</td>
-      <td style="padding:8px; border:1px solid #e5e7eb; color: #666;">SVM</td>
-      <td style="padding:8px; border:1px solid #e5e7eb; color: #666;">8.02</td>
-      <td style="padding:8px; border:1px solid #e5e7eb; color: #666;">3.59</td>
+      <td style="padding:8px; border:1px solid #e5e7eb; color: #555;">KL25Z (M0+)</td>
+      <td style="padding:8px; border:1px solid #e5e7eb; color: #555;">SVM</td>
+      <td style="padding:8px; border:1px solid #e5e7eb; color: #555;">8.02</td>
+      <td style="padding:8px; border:1px solid #e5e7eb; color: #555;">3.59</td>
     </tr>
     <tr style="background:#fafafa;">
-      <td style="padding:8px; border:1px solid #e5e7eb; color: #666;"></td>
-      <td style="padding:8px; border:1px solid #e5e7eb; color: #666;">ANN</td>
-      <td style="padding:8px; border:1px solid #e5e7eb; color: #666;">8.24</td>
-      <td style="padding:8px; border:1px solid #e5e7eb; color: #666;">8.77</td>
+      <td style="padding:8px; border:1px solid #e5e7eb; color: #555;"></td>
+      <td style="padding:8px; border:1px solid #e5e7eb; color: #555;">ANN</td>
+      <td style="padding:8px; border:1px solid #e5e7eb; color: #555;">8.24</td>
+      <td style="padding:8px; border:1px solid #e5e7eb; color: #555;">8.77</td>
     </tr>
     <tr>
-      <td style="padding:8px; border:1px solid #e5e7eb; color: #666;">K64F (M4)</td>
-      <td style="padding:8px; border:1px solid #e5e7eb; color: #666;">SVM</td>
-      <td style="padding:8px; border:1px solid #e5e7eb; color: #666;">6.19</td>
-      <td style="padding:8px; border:1px solid #e5e7eb; color: #666;">24.12</td>
+      <td style="padding:8px; border:1px solid #e5e7eb; color: #555;">K64F (M4)</td>
+      <td style="padding:8px; border:1px solid #e5e7eb; color: #555;">SVM</td>
+      <td style="padding:8px; border:1px solid #e5e7eb; color: #555;">6.19</td>
+      <td style="padding:8px; border:1px solid #e5e7eb; color: #555;">24.12</td>
     </tr>
     <tr style="background:#fafafa;">
-      <td style="padding:8px; border:1px solid #e5e7eb; color: #666;"></td>
-      <td style="padding:8px; border:1px solid #e5e7eb; color: #666;">ANN</td>
-      <td style="padding:8px; border:1px solid #e5e7eb; color: #666;">5.76</td>
-      <td style="padding:8px; border:1px solid #e5e7eb; color: #666;">16.12</td>
+      <td style="padding:8px; border:1px solid #e5e7eb; color: #555;"></td>
+      <td style="padding:8px; border:1px solid #e5e7eb; color: #555;">ANN</td>
+      <td style="padding:8px; border:1px solid #e5e7eb; color: #555;">5.76</td>
+      <td style="padding:8px; border:1px solid #e5e7eb; color: #555;">16.12</td>
     </tr>
   </tbody>
 </table>
@@ -222,15 +222,15 @@
                     <br>
                     
                <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; padding-bottom: 10px; text-align: left;">Insights</h2> 
-               <ul style="padding-left: 40px; padding-bottom: 10px; font-size: 18px; line-height: 28px; color: #666;">
+               <ul style="padding-left: 40px; padding-bottom: 10px; font-size: 18px; line-height: 28px; color: #555;">
                     <li style="margin-bottom: 5px;">
-                       <b style="color: #666;">On Cortex-M0+ (no FPU/SIMD) →</b> custom kernels were more efficient for SVMs. ANN results were similar between CMSIS and custom.
+                       <b style="color: #555;">On Cortex-M0+ (no FPU/SIMD) →</b> custom kernels were more efficient for SVMs. ANN results were similar between CMSIS and custom.
                     </li>
                     <li style="margin-bottom: 5px;">
-                       <b style="color: #666;">On Cortex-M4 (with FPU & SIMD) → </b>CMSIS libraries significantly reduced power consumption.
+                       <b style="color: #555;">On Cortex-M4 (with FPU & SIMD) → </b>CMSIS libraries significantly reduced power consumption.
                     </li>
                     <li style="margin-bottom: 5px;">
-                       <b style="color: #666;">Conclusion: </b>Use custom kernels on low-end MCUs, but rely on CMSIS libraries on higher-end MCUs with hardware acceleration.
+                       <b style="color: #555;">Conclusion: </b>Use custom kernels on low-end MCUs, but rely on CMSIS libraries on higher-end MCUs with hardware acceleration.
                     </li>
                 </ul>
                 </div>
