@@ -441,12 +441,12 @@ max-width: 100%;
 }
 
 .work-card-img img{
-    width: auto;
+    width: 270px;
     height: auto;
-    max-width: 270px;
     max-height: 180px;
     object-fit: contain;
     margin-bottom: 10px;
+    display: block;
 }
 
 .work-card-p{
