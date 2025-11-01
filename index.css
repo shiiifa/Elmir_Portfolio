@@ -654,7 +654,12 @@ max-width: 100%;
     .profile-info h2 {
         font-size: 22px;
         margin-bottom: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
         font-weight: bold;
+        text-align: center;
     }
     
     .profile-bio {
@@ -801,10 +806,16 @@ max-width: 100%;
     
     .profile-info h2 {
         font-size: 20px;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
     
     .profile-bio {
         font-size: 13px;
+        text-align: center;
         word-wrap: break-word;
         word-break: break-word;
         white-space: normal;
