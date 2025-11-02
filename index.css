@@ -274,11 +274,11 @@ footer {
 }
 
 .research-content h3 {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
     margin-top: 35px;
-    color: #555;
+    color: #640807;
 }
 
 .research-content p {
@@ -705,6 +705,15 @@ max-width: 100%;
         color: #640807;
     }
     
+    .research-content h3 {
+        font-size: 24px;
+        color: #640807;
+    }
+    
+    .profile-right #me h3 {
+        font-size: 24px;
+    }
+    
     .research-item {
         margin-bottom: 20px;
         padding: 12px 0;
@@ -991,6 +1000,15 @@ max-width: 100%;
         text-align: center;
         margin-bottom: 20px;
         margin-top: 25px;
+    }
+    
+    .research-content h3 {
+        font-size: 24px;
+        color: #640807;
+    }
+    
+    .profile-right #me h3 {
+        font-size: 24px;
     }
     
     .research-item h3 {
