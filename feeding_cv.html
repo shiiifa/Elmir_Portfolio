@@ -136,12 +136,12 @@
                 <h1 style="color: #640807; text-align: center; font-size: 32px; margin-top: 40px; margin-bottom: 40px; font-weight: bold;">Real Time Monitoring of Animal Feeding Behaviour Using Computer Vision & Embedded Systems</h1>
                 
                 <div style="display: flex; gap: 30px; align-items: flex-start; margin-bottom: 60px; flex-wrap: wrap;">
-                    <div style="flex: 0 0 auto;">
-                        <video width="600" height="360" controls autoplay muted loop style="display: block;">
+                    <div style="flex: 0 0 auto; align-self: flex-start;">
+                        <video width="600" height="360" controls autoplay muted loop style="display: block; margin: 0;">
                             <source src="./video/Media2.mp4" type="video/mp4">
                         </video>
                     </div>
-                    <div style="flex: 1; min-width: 300px;">
+                    <div style="flex: 1; min-width: 300px; align-self: flex-start; display: flex; align-items: flex-start;">
                         <p style="text-align: justify; font-size: 18px; line-height: 28px; margin: 0; color: #555;">
                             This project integrates computer vision (YOLOv8n), embedded systems (Raspberry Pi 4, ESP32), and IoT (MQTT + Firebase) to monitor individual pig feeding behaviour in real time. The system identifies pigs by breed or visual marking, detects entry to the feeding area, measures feeding duration, weighs feed before/after visits (using load cells), and logs per-visit feed consumption and timestamps to a cloud database for time-series analysis.
                         </p>
