@@ -15,6 +15,77 @@
             padding-right: 40px !important;
             box-sizing: border-box;
         }
+        #content-cv,
+        #content-cv p,
+        #content-cv li,
+        #content-cv ul,
+        #content-cv ol,
+        #content-cv td,
+        #content-cv th,
+        #content-cv b,
+        #content-cv strong {
+            color: #555 !important;
+        }
+        #content-cv h2 {
+            color: #640807 !important;
+            margin-top: 60px !important;
+            margin-bottom: 20px !important;
+            text-align: left !important;
+        }
+        
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            section > div {
+                padding: 0 15px !important;
+                margin: 100px auto 0 auto !important;
+            }
+            
+            h1 {
+                font-size: 24px !important;
+                text-align: center !important;
+                margin-top: 20px !important;
+                margin-bottom: 20px !important;
+            }
+            
+            #content-cv {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow: visible !important;
+            }
+            
+            #content-cv > div {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 15px !important;
+                box-sizing: border-box !important;
+            }
+            
+            #content-cv h2 {
+                font-size: 22px !important;
+                text-align: left !important;
+                margin-top: 40px !important;
+                margin-bottom: 15px !important;
+            }
+            
+            #content-cv p {
+                font-size: 16px !important;
+                line-height: 24px !important;
+                text-align: justify !important;
+            }
+            
+            #content-cv ul {
+                padding-left: 20px !important;
+            }
+            
+            #content-cv li {
+                font-size: 16px !important;
+                line-height: 24px !important;
+                margin-bottom: 8px !important;
+            }
+        }
     </style>
     <title>Elmir Mohammed - Water Flow Project</title>
 </head>
@@ -54,8 +125,8 @@
             </div>
 
         <div id="content-cv">
-            <div style="width: 80%; max-width: 800px; margin: auto;">
-                <h2>Overview:</h2>
+            <div style="width: 100%; max-width: 800px; margin: 0 auto; padding: 0 15px; box-sizing: border-box;">
+                <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Overview</h2>
                 <p style="text-align: center; font-size: 18px; line-height: 28px;">
                     This project presents a smart, <b>non-intrusive solution</b> for measuring <b>water flow rate</b> in domestic 
                     pipelines using <b>accelerometer data</b> and <b>machine learning</b>. Instead of relying on intrusive sensors 
@@ -66,7 +137,7 @@
                 </p>
                     <br>
                     <br>
-                <h2>Problem Statement</h2>
+                <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Problem Statement</h2>
                 <p style="text-align: justify; font-size: 18px; line-height: 28px;">
                     Conventional flow meters face major challenges:
                 </p>
@@ -86,7 +157,7 @@
                     <b>Research Question: </b> Can we accurately estimate water flow rates from vibration signals alone, using machine learning, in a low-cost, non-intrusive way?
                 </p>
                 <br>
-                <h2>Personal Contributions</h2>
+                <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Personal Contributions</h2>
                 <ul style="padding-left: 40px;">
                     <li>
                         Designed and implemented the non-intrusive sensing setup (Arduino Nano BLE + accelerometers + flowmeter for ground truth).
@@ -109,7 +180,7 @@
                 </ul>
                 <br>
                 <br>
-                <h2>System architecture (three subsystems)</h2>
+                <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">System architecture (three subsystems)</h2>
                 <p style="text-align: justify; font-size: 18px; line-height: 28px;">1. Data Acquisition Subsystem</p>
                 <ul style="padding-left: 40px;">
                     <li>
@@ -191,7 +262,7 @@
                 </ul>
                 
                 <br>
-                <h2>Results</h2>
+                <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Results</h2>
                 <ul style="padding-left: 40px;">
                     <li>Traditional ML</li>
                     <ul style="padding-left: 40px;">

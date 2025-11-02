@@ -28,6 +28,77 @@
         #profile .profile-right > div {
             max-width: 100%;
         }
+        #content-cv,
+        #content-cv p,
+        #content-cv li,
+        #content-cv ul,
+        #content-cv ol,
+        #content-cv td,
+        #content-cv th,
+        #content-cv b,
+        #content-cv strong {
+            color: #555 !important;
+        }
+        #content-cv h2 {
+            color: #640807 !important;
+            margin-top: 60px !important;
+            margin-bottom: 20px !important;
+            text-align: left !important;
+        }
+        
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            #profile .profile-container {
+                padding: 0 15px !important;
+                margin: 100px auto 0 auto !important;
+            }
+            
+            #profile .profile-right > h1 {
+                font-size: 24px !important;
+                text-align: center !important;
+                margin-top: 20px !important;
+                margin-bottom: 20px !important;
+            }
+            
+            #content-cv {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow: visible !important;
+            }
+            
+            #content-cv > div {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 15px !important;
+                box-sizing: border-box !important;
+            }
+            
+            #content-cv h2 {
+                font-size: 22px !important;
+                text-align: left !important;
+                margin-top: 40px !important;
+                margin-bottom: 15px !important;
+            }
+            
+            #content-cv p {
+                font-size: 16px !important;
+                line-height: 24px !important;
+                text-align: justify !important;
+            }
+            
+            #content-cv ul {
+                padding-left: 20px !important;
+            }
+            
+            #content-cv li {
+                font-size: 16px !important;
+                line-height: 24px !important;
+                margin-bottom: 8px !important;
+            }
+        }
     </style>
     <title>Elmir Mohammed - Feeding CV Project</title>
 </head>
@@ -69,14 +140,14 @@
                     </video>
                 </div>
         <div id="content-cv">
-            <div style="width: 80%; max-width: 800px; margin: auto;">
-                <h2>Overview:</h2>
+            <div style="width: 100%; max-width: 800px; margin: 0 auto; padding: 0 15px; box-sizing: border-box;">
+                <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Overview</h2>
                 <p style="text-align: center; font-size: 18px; line-height: 28px;">
                     This project integrates computer vision (YOLOv8n), embedded systems (Raspberry Pi 4, ESP32), and IoT (MQTT + Firebase) to monitor individual pig feeding behaviour in real time. The system identifies pigs by breed or visual marking, detects entry to the feeding area, measures feeding duration, weighs feed before/after visits (using load cells), and logs per-visit feed consumption and timestamps to a cloud database for time-series analysis.
                 </p>
                     <br>
                     <br>
-                <h2>Problem Statement</h2>
+                <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Problem Statement</h2>
                 <p style="text-align: justify; font-size: 18px; line-height: 28px;">
                     Manual monitoring is labour-intensive and sensor tags are intrusive (biosecurity and welfare issues). Key challenges: reliably identifying individuals (especially same-breed pigs), measuring per-visit feed intake, and building a real-time, farm-robust pipeline that runs on low-cost edge hardware.
                 </p>
@@ -95,7 +166,7 @@
                     </li>
                 </ul>
                 <br>
-                <h2>Personal Contributions</h2>
+                <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Personal Contributions</h2>
                 <ul style="padding-left: 40px;">
                     <li>
                         Led the design and implementation of the system.
@@ -115,7 +186,7 @@
                 </ul>
                 <br>
                 <br>
-                <h2>System architecture (three subsystems)</h2>
+                <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">System architecture (three subsystems)</h2>
                 <div style="display: flex; justify-content: center; align-items: center;">
                     <img src="./img/system_architecture.jpg" width="500px" alt="">
                 </div>
@@ -181,7 +252,7 @@
                 </ul>
                 
                 <br>
-                <h2>Data & model details</h2>
+                <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Data & model details</h2>
                 <ul style="padding-left: 40px;">
                     <li>Data captured: Two scenarios</li>
                     <ul style="padding-left: 40px;">
@@ -214,7 +285,7 @@
                     <small>Sample Detection on Raspberry Pi 4</small>
                 </div>
                 
-                <h2>Assigning Unique ID to individual Pigs (Tracking approaches)</h2>
+                <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Assigning Unique ID to individual Pigs (Tracking approaches)</h2>
                 <ul style="padding-left: 40px;">
                     <li><b>Marking (numbers):</b> high identification accuracy but intrusive & not scalable (markings fade).</li>
                     <div style="display: flex; justify-content: center;">
@@ -254,7 +325,7 @@
                     </div>
                 <br>
                 <br>
-               <h2 style="padding-bottom: 30px;">Tracking Feeding Behavior</h2> 
+               <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left; padding-bottom: 30px;">Tracking Feeding Behavior</h2> 
                
                <p style="text-align: justify; font-size: 18px; line-height: 28px;">
                 To monitor feeding behavior, the system combines computer vision and sensors. An ultrasonic sensor is placed near the feeding area and detects the presence of an object within a 60 cm range. Once triggered, the sensor activates the computer vision subsystem on the Raspberry Pi to confirm whether the object is a pig and identify its breed.

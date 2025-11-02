@@ -28,6 +28,77 @@
         #profile .profile-right > div {
             max-width: 100%;
         }
+        #content-cv,
+        #content-cv p,
+        #content-cv li,
+        #content-cv ul,
+        #content-cv ol,
+        #content-cv td,
+        #content-cv th,
+        #content-cv b,
+        #content-cv strong {
+            color: #555 !important;
+        }
+        #content-cv h2 {
+            color: #640807 !important;
+            margin-top: 60px !important;
+            margin-bottom: 20px !important;
+            text-align: left !important;
+        }
+        
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            #profile .profile-container {
+                padding: 0 15px !important;
+                margin: 100px auto 0 auto !important;
+            }
+            
+            #profile .profile-right > h1 {
+                font-size: 24px !important;
+                text-align: center !important;
+                margin-top: 20px !important;
+                margin-bottom: 20px !important;
+            }
+            
+            #content-cv {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow: visible !important;
+            }
+            
+            #content-cv > div {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 15px !important;
+                box-sizing: border-box !important;
+            }
+            
+            #content-cv h2 {
+                font-size: 22px !important;
+                text-align: left !important;
+                margin-top: 40px !important;
+                margin-bottom: 15px !important;
+            }
+            
+            #content-cv p {
+                font-size: 16px !important;
+                line-height: 24px !important;
+                text-align: justify !important;
+            }
+            
+            #content-cv ul {
+                padding-left: 20px !important;
+            }
+            
+            #content-cv li {
+                font-size: 16px !important;
+                line-height: 24px !important;
+                margin-bottom: 8px !important;
+            }
+        }
     </style>
     <title>Elmir Mohammed - Pig CV Project</title>
 </head>
@@ -70,29 +141,29 @@
                 </div>
 
         <div id="content-cv">
-            <div style="width: 80%; max-width: 800px; margin: auto;">
-                <h2>Overview:</h2>
-                <p style="text-align: center; font-size: 18px; line-height: 28px;">This project presents a non-intrusive, real-time computer vision system for monitoring pigs in farm environments. The system identifies individual pigs by breed and tracks their movements to assess health and behavior patterns. By leveraging deep learning models (YOLOv8n, MobileNetSSD, EfficientNet-B0) and deploying on a Raspberry Pi 4, the system achieved up 
+            <div style="width: 100%; max-width: 800px; margin: 0 auto; padding: 0 15px; box-sizing: border-box;">
+                <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Overview</h2>
+                <p style="text-align: justify; font-size: 18px; line-height: 28px; color: #555;">This project presents a non-intrusive, real-time computer vision system for monitoring pigs in farm environments. The system identifies individual pigs by breed and tracks their movements to assess health and behavior patterns. By leveraging deep learning models (YOLOv8n, MobileNetSSD, EfficientNet-B0) and deploying on a Raspberry Pi 4, the system achieved up 
                     to 97% accuracy, making it practical for precision livestock farming.</p>
                     <br>
                     <br>
-                <h2>Problem Statement</h2>
-                <p style="text-align: justify; font-size: 18px; line-height: 28px;">Traditional methods of monitoring pig behavior in Africa and beyond rely heavily on manual 
+                <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Problem Statement</h2>
+                <p style="text-align: justify; font-size: 18px; line-height: 28px; color: #555;">Traditional methods of monitoring pig behavior in Africa and beyond rely heavily on manual 
                     observation or sensor-based approaches (accelerometers, RFID tags).</p>
-                <ul style="padding-left: 40px;">
-                    <li>
+                <ul style="padding-left: 40px; color: #555;">
+                    <li style="color: #555;">
                         Manual observation is labor-intensive, prone to human error, and inefficient for large farms.
                     </li>
-                    <li>
+                    <li style="color: #555;">
                         Sensor-based approaches are intrusive, cause pain/biosecurity risks for animals, and can malfunction when pigs roll or fight.
                     </li>
                 </ul>
-                <b>A low-cost, automated, and non-intrusive alternative was needed.</b>
+                <p style="color: #555;"><b style="color: #555;">A low-cost, automated, and non-intrusive alternative was needed.</b></p>
                 <br>
                 <br>
-                <h2>Proposed Solution</h2>
-                <p style="text-align: justify; font-size: 18px; line-height: 28px;">We designed a computer vision system that:</p>
-                <ul style="padding-left: 40px;">
+                <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Proposed Solution</h2>
+                <p style="text-align: justify; font-size: 18px; line-height: 28px; color: #555;">We designed a computer vision system that:</p>
+                <ul style="padding-left: 40px; color: #555;">
                     <li>
                         Identifies individual pig breeds (Berkshire, Duroc, Landrace, Pietrain).
                     </li>
@@ -107,7 +178,7 @@
                     </li>
                 </ul>
                 <br>
-                <h2>Personal Contributions</h2>
+                <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Personal Contributions</h2>
                 <ul style="padding-left: 40px;">
                     <li>
                         Co-authored a paper published on IEEE Xplore <a href="https://ieeexplore.ieee.org/document/10856474" style="display: inline-block;">Link</a>
@@ -126,13 +197,13 @@
                     </li>
                 </ul>
                 <br>
-                <h2>Technical Approach</h2>
-                <p style="text-align: justify; font-size: 18px; line-height: 28px;">1. Data Collection</p>
+                <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Technical Approach</h2>
+                <p style="text-align: justify; font-size: 18px; line-height: 28px; color: #555;">1. Data Collection</p>
                 <div style="display: flex; justify-content: center; align-items: center;">
                     <img src="./img/data_collection.png" alt="">
                 </div>
-                <ul style="padding-left: 40px;">
-                    <li>
+                <ul style="padding-left: 40px; color: #555;">
+                    <li style="color: #555;">
                         4 pig breeds, same weight (~25kg) and age (~8 weeks).
                     </li>
                     <li>
@@ -156,7 +227,7 @@
                     Data collection with Pi-camera and CCTV camera</small>
                 </div>
                 <br>
-                <p style="text-align: justify; font-size: 18px; line-height: 28px;">2. Pre-processing</p>
+                <p style="text-align: justify; font-size: 18px; line-height: 28px; color: #555;">2. Pre-processing</p>
                 <ul style="padding-left: 40px;">
                     <li>
                         Annotation with RoboFlow.
@@ -172,7 +243,7 @@
                     </li>
                 </ul>
                 <br>
-                <p style="text-align: justify; font-size: 18px; line-height: 28px;">3. Model Training</p>
+                <p style="text-align: justify; font-size: 18px; line-height: 28px; color: #555;">3. Model Training</p>
                 <div style="display: flex; justify-content: center;">
                     <img src="./img/performance.png" width="700px" alt="">
                 </div>
@@ -199,7 +270,7 @@
                     <small style="text-align: center;">YOLOv8n performed the best thus selected for deployment on MCU</small>
                 </div>
                 <br>
-                <p style="text-align: justify; font-size: 18px; line-height: 28px;">4. Implemented Approach (Centroid Tracking)</p>
+                <p style="text-align: justify; font-size: 18px; line-height: 28px; color: #555;">4. Implemented Approach (Centroid Tracking)</p>
                 <div style="display: flex; justify-content: center;">
                     <img src="./img/centroidal.png" width="600px" alt="">
                 </div>
