@@ -134,19 +134,21 @@
         <div class="profile-container">
             <div class="profile-right">
                 <h1 style="color: #640807; text-align: center; font-size: 32px; margin-bottom: 40px; font-weight: bold;">Monitoring of Animal Movement using Computer Vision</h1>
-                <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 60px;">
-                    <video width="900" height="360" controls autoplay muted loop style="display: block; margin: 0 auto;">
-                        <source src="./video/Media1.mp4" type="video/mp4">
-                    </video>
-                </div>
-
+                
         <div id="content-cv">
             <div style="width: 100%; max-width: 800px; margin: 0 auto; padding: 0 15px; box-sizing: border-box;">
-                <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Overview</h2>
-                <p style="text-align: justify; font-size: 18px; line-height: 28px; color: #555;">This project presents a non-intrusive, real-time computer vision system for monitoring pigs in farm environments. The system identifies individual pigs by breed and tracks their movements to assess health and behavior patterns. By leveraging deep learning models (YOLOv8n, MobileNetSSD, EfficientNet-B0) and deploying on a Raspberry Pi 4, the system achieved up 
-                    to 97% accuracy, making it practical for precision livestock farming.</p>
-                    <br>
-                    <br>
+                <div style="display: flex; gap: 30px; align-items: flex-start; margin-bottom: 60px; flex-wrap: wrap;">
+                    <div style="flex: 0 0 auto; align-self: flex-start;">
+                        <video width="600" height="360" controls autoplay muted loop style="display: block; margin: 0;">
+                            <source src="./video/Media1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div style="flex: 1; min-width: 300px; align-self: flex-start; display: flex; align-items: flex-start;">
+                        <p style="text-align: justify; font-size: 18px; line-height: 28px; margin: 0; color: #555;">
+                            This project presents a non-intrusive, real-time computer vision system for monitoring pigs in farm environments. The system identifies individual pigs by breed and tracks their movements to assess health and behavior patterns. By leveraging deep learning models (YOLOv8n, MobileNetSSD, EfficientNet-B0) and deploying on a Raspberry Pi 4, the system achieved up to 97% accuracy, making it practical for precision livestock farming.
+                        </p>
+                    </div>
+                </div>
                 <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Problem Statement</h2>
                 <p style="text-align: justify; font-size: 18px; line-height: 28px; color: #555;">Traditional methods of monitoring pig behavior in Africa and beyond rely heavily on manual 
                     observation or sensor-based approaches (accelerometers, RFID tags).</p>
