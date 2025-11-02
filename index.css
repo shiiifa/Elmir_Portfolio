@@ -21,6 +21,11 @@
 
 body {
     animation: fadeIn 0.5s ease-in;
+    color: #555;
+}
+
+p, li, td, th, b, strong {
+    color: #555;
 }
 
 .name{
@@ -133,7 +138,7 @@ nav{
     margin-left: 0;
     margin-top: 0;
     padding-left: 0;
-    color: #333;
+    color: #555;
     text-align: left;
 }
 
@@ -169,7 +174,7 @@ nav{
 }
 
 .contact-item:hover {
-    color: #333;
+    color: #555;
 }
 
 .contact-item svg {
@@ -273,7 +278,7 @@ footer {
     font-weight: bold;
     margin-bottom: 20px;
     margin-top: 35px;
-    color: #333;
+    color: #555;
 }
 
 .research-content p {
@@ -302,7 +307,7 @@ footer {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #333;
+    color: #555;
 }
 
 .research-meta {
