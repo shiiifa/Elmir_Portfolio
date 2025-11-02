@@ -133,54 +133,59 @@
     <section id="profile">
         <div class="profile-container">
             <div class="profile-right">
-                <h1 style="color: #640807; text-align: center; font-size: 32px; margin-bottom: 40px; font-weight: bold;">Real Time Monitoring of Animal Feeding Behaviour Using Computer Vision & Embedded Systems</h1>
-                <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 60px;">
-                    <video width="900" height="360" controls autoplay muted loop style="display: block; margin: 0 auto;">
-                        <source src="./video/Media2.mp4" type="video/mp4">
-                    </video>
+                <h1 style="color: #640807; text-align: center; font-size: 32px; margin-top: 40px; margin-bottom: 40px; font-weight: bold;">Real Time Monitoring of Animal Feeding Behaviour Using Computer Vision & Embedded Systems</h1>
+                
+                <div style="display: flex; gap: 30px; align-items: flex-start; margin-bottom: 60px; flex-wrap: wrap;">
+                    <div style="flex: 0 0 auto;">
+                        <video width="600" height="360" controls autoplay muted loop style="display: block;">
+                            <source src="./video/Media2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div style="flex: 1; min-width: 300px;">
+                        <p style="text-align: justify; font-size: 18px; line-height: 28px; margin: 0; color: #555;">
+                            This project integrates computer vision (YOLOv8n), embedded systems (Raspberry Pi 4, ESP32), and IoT (MQTT + Firebase) to monitor individual pig feeding behaviour in real time. The system identifies pigs by breed or visual marking, detects entry to the feeding area, measures feeding duration, weighs feed before/after visits (using load cells), and logs per-visit feed consumption and timestamps to a cloud database for time-series analysis.
+                        </p>
+                    </div>
                 </div>
+
         <div id="content-cv">
             <div style="width: 100%; max-width: 800px; margin: 0 auto; padding: 0 15px; box-sizing: border-box;">
-                <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Overview</h2>
-                <p style="text-align: center; font-size: 18px; line-height: 28px;">
-                    This project integrates computer vision (YOLOv8n), embedded systems (Raspberry Pi 4, ESP32), and IoT (MQTT + Firebase) to monitor individual pig feeding behaviour in real time. The system identifies pigs by breed or visual marking, detects entry to the feeding area, measures feeding duration, weighs feed before/after visits (using load cells), and logs per-visit feed consumption and timestamps to a cloud database for time-series analysis.
-                </p>
                     <br>
                     <br>
                 <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Problem Statement</h2>
                 <p style="text-align: justify; font-size: 18px; line-height: 28px;">
                     Manual monitoring is labour-intensive and sensor tags are intrusive (biosecurity and welfare issues). Key challenges: reliably identifying individuals (especially same-breed pigs), measuring per-visit feed intake, and building a real-time, farm-robust pipeline that runs on low-cost edge hardware.
                 </p>
-                <ul style="padding-left: 40px;">
-                    <li>
+                <ul style="padding-left: 40px; color: #555; font-size: 18px; line-height: 28px;">
+                    <li style="color: #555; margin-bottom: 10px;">
                         End-to-end system combining vision, ultrasonic triggers, weight sensing (load cells), and MQTT communication.
                     </li>
-                    <li>
+                    <li style="color: #555; margin-bottom: 10px;">
                         Evaluated three identification/tracking strategies: marking (numbers), centroid tracking, and SORT (Kalman filter + Hungarian matching).
                     </li>
-                    <li>
+                    <li style="color: #555; margin-bottom: 10px;">
                         Demonstrated high detection performance using YOLOv8n (per-breed accuracies: Landrace 99%, Pietrain 95%, Duroc 97%, Berkshire 96%; mAP ≈ 97%).
                     </li>
-                    <li>
+                    <li style="color: #555; margin-bottom: 10px;">
                         Practical engineering to improve edge performance (image resize, 1-second sampling) and measured the accuracy/FPS tradeoff.
                     </li>
                 </ul>
                 <br>
                 <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Personal Contributions</h2>
-                <ul style="padding-left: 40px;">
-                    <li>
+                <ul style="padding-left: 40px; color: #555; font-size: 18px; line-height: 28px;">
+                    <li style="color: #555; margin-bottom: 10px;">
                         Led the design and implementation of the system.
                     </li>
-                    <li>
+                    <li style="color: #555; margin-bottom: 10px;">
                         Developed the computer vision pipeline (YOLOv8n + OpenCV) for pig detection and feeding behavior tracking
                     </li>
-                    <li>
+                    <li style="color: #555; margin-bottom: 10px;">
                         Integrated ultrasonic sensors and load cells with ESP32 for feed measurement.
                     </li>
-                    <li>
+                    <li style="color: #555; margin-bottom: 10px;">
                         Set up IoT communication (MQTT) between Raspberry Pi, ESP32, and cloud server.
                     </li>
-                    <li>
+                    <li style="color: #555; margin-bottom: 10px;">
                         Drafted the research paper, which is under review for IEEE publication (Lead Author).
                     </li>
                 </ul>
@@ -190,18 +195,18 @@
                 <div style="display: flex; justify-content: center; align-items: center;">
                     <img src="./img/system_architecture.jpg" width="500px" alt="">
                 </div>
-                <p style="text-align: justify; font-size: 18px; line-height: 28px;">1. Feed weight subsystem</p>
-                <ul style="padding-left: 40px;">
-                    <li>
+                <p style="text-align: left; font-size: 18px; line-height: 28px; color: #555; margin-top: 20px; margin-bottom: 15px; font-weight: bold;"><b style="color: #555;">1. Feed weight subsystem</b></p>
+                <ul style="padding-left: 40px; color: #555; font-size: 18px; line-height: 28px; margin-bottom: 30px;">
+                    <li style="color: #555; margin-bottom: 10px;">
                         Four 20-kg load cells under feed troughs.
                     </li>
-                    <li>
+                    <li style="color: #555; margin-bottom: 10px;">
                         ESP32 reads HX711 / load cell ADC.
                     </li>
-                    <li>                   
+                    <li style="color: #555; margin-bottom: 10px;">                   
                         Triggered by a pig entry event → capture pre-feed weight (FPA) and post-feed weight (FL).
                     </li>
-                    <li>
+                    <li style="color: #555; margin-bottom: 10px;">
                         Feed consumed per visit = FPA − FL.
                     </li>
                 </ul>
@@ -218,34 +223,34 @@
                     <small style="text-align: center;">Circuit Design & PCB</small>
                 </div>
                 <br>
-                <p style="text-align: justify; font-size: 18px; line-height: 28px;">2. Computer Vision System</p>
-                <ul style="padding-left: 40px;">
-                    <li>
+                <p style="text-align: left; font-size: 18px; line-height: 28px; color: #555; margin-top: 30px; margin-bottom: 15px; font-weight: bold;"><b style="color: #555;">2. Computer Vision System</b></p>
+                <ul style="padding-left: 40px; color: #555; font-size: 18px; line-height: 28px; margin-bottom: 30px;">
+                    <li style="color: #555; margin-bottom: 10px;">
                         Camera: Raspberry Pi Camera Module 3 (12 MP, IMX708, 120° FOV).
                     </li>
-                    <li>
+                    <li style="color: #555; margin-bottom: 10px;">
                         Detection model: YOLOv8n (trained/fine-tuned on dataset).
                     </li>
-                    <li>
+                    <li style="color: #555; margin-bottom: 10px;">
                         Trigger: ultrasonic sensor detects presence within 60 cm → Pi starts 1-second interval captures and inference.
                     </li>
-                    <li>
+                    <li style="color: #555; margin-bottom: 10px;">
                         Tracking strategies: marking detection, centroid tracking, SORT algorithm.
                     </li>
-                    <li>
+                    <li style="color: #555; margin-bottom: 10px;">
                         Measures feeding duration by detecting centroid crossing virtual entry line and timing until leaving.
                     </li>
                 </ul>
                 <br>
-                <p style="text-align: justify; font-size: 18px; line-height: 28px;">3. End-user subsystem</p>
-                <ul style="padding-left: 40px;">
-                    <li>
+                <p style="text-align: left; font-size: 18px; line-height: 28px; color: #555; margin-top: 30px; margin-bottom: 15px; font-weight: bold;"><b style="color: #555;">3. End-user subsystem</b></p>
+                <ul style="padding-left: 40px; color: #555; font-size: 18px; line-height: 28px; margin-bottom: 30px;">
+                    <li style="color: #555; margin-bottom: 10px;">
                         Raspberry Pi aggregates breed/ID, feeding duration, and weight delta.
                     </li>
-                    <li>
+                    <li style="color: #555; margin-bottom: 10px;">
                         Data published via MQTT from ESP32 → Pi → cloud; stored in Firebase.
                     </li>
-                    <li>
+                    <li style="color: #555; margin-bottom: 10px;">
                         Visualized as time-series (grams vs. time) for each pig.
                     </li>
             
@@ -253,29 +258,28 @@
                 
                 <br>
                 <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Data & model details</h2>
-                <ul style="padding-left: 40px;">
-                    <li>Data captured: Two scenarios</li>
-                    <ul style="padding-left: 40px;">
-                        <li>
+                <ul style="padding-left: 40px; color: #555; font-size: 18px; line-height: 28px; margin-bottom: 30px;">
+                    <li style="color: #555; margin-bottom: 10px;">Data captured: Two scenarios</li>
+                    <ul style="padding-left: 40px; color: #555; font-size: 18px; line-height: 28px; margin-bottom: 15px;">
+                        <li style="color: #555; margin-bottom: 5px;">
                             Different breeds: 10,676 images (train/test/val split as in paper).
                         </li>
-                        <li>
+                        <li style="color: #555; margin-bottom: 5px;">
                             Same-breed (three Landrace with numbered markings): 3,386 images.
                         </li>
 
                     </ul>
-                    <li><b>YOLOv8n training: </b>350 epochs on Google Colab (Ultralytics).</li>
-                    <li><b>Per-breed validation accuracies:</b>Landrace 99%, Pietrain 95%, Duroc 97%, Berkshire 96% (mAP ≈ 97%)</li>
-                    <li><b>Image size vs FPS on Raspberry Pi: </b></li>
-                    <ul style="padding-left: 40px;">
-                        <li>640×640 → Accuracy 0.97, FPS ≈ 0.8</li>
-                        <li>320×320 → Accuracy 0.96, FPS ≈ 2.1</li>
+                    <li style="color: #555; margin-bottom: 10px;"><b style="color: #555;">YOLOv8n training: </b>350 epochs on Google Colab (Ultralytics).</li>
+                    <li style="color: #555; margin-bottom: 10px;"><b style="color: #555;">Per-breed validation accuracies:</b>Landrace 99%, Pietrain 95%, Duroc 97%, Berkshire 96% (mAP ≈ 97%)</li>
+                    <li style="color: #555; margin-bottom: 10px;"><b style="color: #555;">Image size vs FPS on Raspberry Pi: </b></li>
+                    <ul style="padding-left: 40px; color: #555; font-size: 18px; line-height: 28px; margin-bottom: 15px;">
+                        <li style="color: #555; margin-bottom: 5px;">640×640 → Accuracy 0.97, FPS ≈ 0.8</li>
+                        <li style="color: #555; margin-bottom: 5px;">320×320 → Accuracy 0.96, FPS ≈ 2.1</li>
                     </ul>
-                     <div style="display: flex; justify-content: center;">
+                     <div style="display: flex; justify-content: center; margin-bottom: 15px;">
                     <img src="./img/fps.png" width="200px" alt="">
                 </div>
-                <br>
-                    <li><b>Marking model (Roboflow)</b> for same-breed numbering: mAP ≈ 84.6 (overall).</li>
+                    <li style="color: #555; margin-bottom: 10px;"><b style="color: #555;">Marking model (Roboflow)</b> for same-breed numbering: mAP ≈ 84.6 (overall).</li>
                 </ul>
                 <br>
                <div style="display: flex; justify-content: center;">
@@ -286,8 +290,8 @@
                 </div>
                 
                 <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left;">Assigning Unique ID to individual Pigs (Tracking approaches)</h2>
-                <ul style="padding-left: 40px;">
-                    <li><b>Marking (numbers):</b> high identification accuracy but intrusive & not scalable (markings fade).</li>
+                <ul style="padding-left: 40px; color: #555; font-size: 18px; line-height: 28px; margin-bottom: 30px;">
+                    <li style="color: #555; margin-bottom: 15px;"><b style="color: #555;">Marking (numbers):</b> high identification accuracy but intrusive & not scalable (markings fade).</li>
                     <div style="display: flex; justify-content: center;">
                     <iframe width="550" height="300" 
         src="https://www.youtube.com/embed/9gRNzxMdybg?autoplay=1&mute=1&loop=1&playlist=9gRNzxMdybg" 
@@ -299,7 +303,7 @@
 
                     </div>
                     <br>
-                <li><b>Centroid positional change:</b> non-intrusive, lightweight; prone to ID swap when pigs cluster.</li>
+                <li style="color: #555; margin-bottom: 15px;"><b style="color: #555;">Centroid positional change:</b> non-intrusive, lightweight; prone to ID swap when pigs cluster.</li>
                 <div style="display: flex; justify-content: center;">
                     <iframe width="550" height="300" 
         src="https://www.youtube.com/embed/xciat4pTyWA?autoplay=1&mute=1&loop=1&playlist=xciat4pTyWA" 
@@ -311,7 +315,7 @@
 
                     </div>
                     <br>
-                <li><b>SORT algorithm:</b> Good identity persistence under occlusion/clustering; heavier computationally (Kalman + data association).</li>  
+                <li style="color: #555; margin-bottom: 15px;"><b style="color: #555;">SORT algorithm:</b> Good identity persistence under occlusion/clustering; heavier computationally (Kalman + data association).</li>  
                     
                     <div style="display: flex; justify-content: center;">
                     <iframe width="550" height="300" 
@@ -327,12 +331,12 @@
                 <br>
                <h2 style="color: #640807; margin-top: 60px; margin-bottom: 20px; text-align: left; padding-bottom: 30px;">Tracking Feeding Behavior</h2> 
                
-               <p style="text-align: justify; font-size: 18px; line-height: 28px;">
+               <p style="text-align: justify; font-size: 18px; line-height: 28px; color: #555; margin-bottom: 20px;">
                 To monitor feeding behavior, the system combines computer vision and sensors. An ultrasonic sensor is placed near the feeding area and detects the presence of an object within a 60 cm range. Once triggered, the sensor activates the computer vision subsystem on the Raspberry Pi to confirm whether the object is a pig and identify its breed.
-                <br>
-                Using OpenCV, virtual lines are drawn across the feeding region. When the centroid of a pig’s bounding box crosses this threshold, the system records the start of feeding. When the pig exits and the centroid crosses back out, the system records the end of feeding. The time difference gives the feeding duration.
-
-At the same time, the feed weighing subsystem (with load cells connected to an ESP32) measures feed levels. Feed weight is captured when the pig enters (FPA) and again when it leaves (FL). The difference provides the feed consumed.
+                <br><br>
+                Using OpenCV, virtual lines are drawn across the feeding region. When the centroid of a pig's bounding box crosses this threshold, the system records the start of feeding. When the pig exits and the centroid crosses back out, the system records the end of feeding. The time difference gives the feeding duration.
+                <br><br>
+                At the same time, the feed weighing subsystem (with load cells connected to an ESP32) measures feed levels. Feed weight is captured when the pig enters (FPA) and again when it leaves (FL). The difference provides the feed consumed.
                </p>
                <div style="display: flex; justify-content: center; align-items: center;">
                     <div>
@@ -352,6 +356,10 @@ At the same time, the feed weighing subsystem (with load cells connected to an E
 </iframe>
 
                     </div>
+                
+                <div style="display: flex; justify-content: center; gap: 12px; margin-top: 50px; margin-bottom: 50px; flex-wrap: wrap;">
+                    <a href="https://github.com/Knight-Khode/animal-behavior-monitoring-ml" style="background-color: #640807; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 14px; white-space: nowrap;">Github Link</a>
+                </div>
                 </div>
             </div>
         </div>
