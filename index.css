@@ -278,7 +278,7 @@ footer {
     font-weight: bold;
     margin-bottom: 20px;
     margin-top: 35px;
-    color: #640807;
+    color: #555;
 }
 
 .research-content p {
@@ -707,7 +707,7 @@ max-width: 100%;
     
     .research-content h3 {
         font-size: 24px;
-        color: #640807;
+        color: #555;
     }
     
     .profile-right #me h3 {
@@ -1004,7 +1004,7 @@ max-width: 100%;
     
     .research-content h3 {
         font-size: 24px;
-        color: #640807;
+        color: #555;
     }
     
     .profile-right #me h3 {
