@@ -1038,6 +1038,62 @@ max-width: 100%;
     }
 }
 
+/* Zoom Controls */
+#zoom-controls {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    z-index: 1000;
+    background-color: #640807;
+    padding: 4px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#zoom-in,
+#zoom-out {
+    background-color: white;
+    color: #640807;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+#zoom-in:hover,
+#zoom-out:hover {
+    background-color: #f0f0f0;
+}
+
+#zoom-in:active,
+#zoom-out:active {
+    background-color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    #zoom-controls {
+        bottom: 15px;
+        left: 15px;
+    }
+    
+    #zoom-in,
+    #zoom-out {
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+    }
+}
+
 @media (max-width: 480px) {
     .name {
         font-size: 28px;
@@ -1173,5 +1229,61 @@ max-width: 100%;
         font-size: 14px !important;
         padding: 8px 16px !important;
         white-space: nowrap !important;
+    }
+}
+
+/* Zoom Controls */
+#zoom-controls {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    z-index: 1000;
+    background-color: #640807;
+    padding: 4px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#zoom-in,
+#zoom-out {
+    background-color: white;
+    color: #640807;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+#zoom-in:hover,
+#zoom-out:hover {
+    background-color: #f0f0f0;
+}
+
+#zoom-in:active,
+#zoom-out:active {
+    background-color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    #zoom-controls {
+        bottom: 15px;
+        left: 15px;
+    }
+    
+    #zoom-in,
+    #zoom-out {
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
     }
 }
