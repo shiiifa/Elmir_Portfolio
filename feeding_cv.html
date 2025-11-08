@@ -437,17 +437,27 @@
             const zoomOutBtn = document.getElementById('zoom-out');
             let currentZoom = 100;
             
+            // Get elements to zoom (header and main content, not sidebar)
+            const nav = document.querySelector('nav');
+            const profileRight = document.querySelector('.profile-right');
+            const contentCv = document.querySelector('#content-cv');
+            const zoomElements = [nav, profileRight, contentCv].filter(el => el !== null);
+            
             // Load saved zoom level from localStorage
             const savedZoom = localStorage.getItem('pageZoom');
             if (savedZoom) {
                 currentZoom = parseInt(savedZoom);
-                document.body.style.zoom = currentZoom + '%';
+                zoomElements.forEach(el => {
+                    if (el) el.style.zoom = currentZoom + '%';
+                });
             }
             
             zoomInBtn.addEventListener('click', function() {
                 if (currentZoom < 200) {
                     currentZoom += 10;
-                    document.body.style.zoom = currentZoom + '%';
+                    zoomElements.forEach(el => {
+                        if (el) el.style.zoom = currentZoom + '%';
+                    });
                     localStorage.setItem('pageZoom', currentZoom);
                 }
             });
@@ -455,7 +465,9 @@
             zoomOutBtn.addEventListener('click', function() {
                 if (currentZoom > 50) {
                     currentZoom -= 10;
-                    document.body.style.zoom = currentZoom + '%';
+                    zoomElements.forEach(el => {
+                        if (el) el.style.zoom = currentZoom + '%';
+                    });
                     localStorage.setItem('pageZoom', currentZoom);
                 }
             });
