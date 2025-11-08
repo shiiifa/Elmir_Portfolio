@@ -304,6 +304,66 @@ footer {
     padding-top: 5px;
 }
 
+/* News Tiles */
+.news-tile {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.news-tile:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.news-tile h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #640807;
+}
+
+.news-tile p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.news-tile-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.news-button {
+    background-color: #640807;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.news-button:hover {
+    background-color: #4a0606;
+    color: white;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .research-item h3 {
     font-size: 20px;
     font-weight: bold;
@@ -723,6 +783,26 @@ max-width: 100%;
     .research-item h3 {
         font-size: 18px;
         margin-bottom: 8px;
+    }
+    
+    .news-tile {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .news-tile h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    .news-tile p {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .news-button {
+        padding: 8px 16px;
+        font-size: 13px;
     }
     
     .research-meta {

@@ -130,18 +130,18 @@
                         </div>
                     </div>
                     <div style="flex: 1; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px;">
-                        <img src="./img/igem1.png" width="350px" alt="iGEM 1" style="max-width: 100%; height: auto;">
-                        <img src="./img/igem2.png" width="350px" alt="iGEM 2" style="max-width: 100%; height: auto;">
-                        <img src="./img/igem3.png" width="350px" alt="iGEM 3" style="max-width: 100%; height: auto;">
+                        <img src="./img/igem1.png" width="300px" alt="iGEM 1" style="max-width: 100%; height: auto;">
+                        <img src="./img/igem2.png" width="300px" alt="iGEM 2" style="max-width: 100%; height: auto;">
+                        <img src="./img/igem3.png" width="300px" alt="iGEM 3" style="max-width: 100%; height: auto;">
                     </div>
                 </div>
 
                 <div style="margin-bottom: 60px; display: flex; gap: 30px; align-items: flex-start;">
                     <div style="flex: 1;">
                         <h3 style="color: #640807; font-size: 24px; margin-bottom: 20px; text-align: left;">Service Recognition</h3>
-                        <ul style="padding-left: 30px; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
-                            <li>Three recognitions for service to community (peer academic advisor, buddy coach, volunteering for mSMILES Foundation)</li>
-                        </ul>
+                        <p style="text-align: justify; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                            Three recognitions for service to community (peer academic advisor, buddy coach, volunteering for mSMILES Foundation).
+                        </p>
                     </div>
                     <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
                         <img src="./img/msmiles.png" width="400px" alt="mSMILES Recognition" style="max-width: 100%; height: auto;">
@@ -261,39 +261,45 @@
     </div>
     
     <script>
-        // Zoom functionality
+        // Zoom functionality - only for awards page
         document.addEventListener('DOMContentLoaded', function() {
             const zoomInBtn = document.getElementById('zoom-in');
             const zoomOutBtn = document.getElementById('zoom-out');
             let currentZoom = 100;
             
-            // Find the main content area
-            const contentArea = document.querySelector('.research-content') || document.querySelector('.profile-right') || document.querySelector('.awards-content');
+            // Find the awards content area (only zoom awards page)
+            const contentArea = document.querySelector('.awards-content');
             
-            if (!contentArea) return;
-            
-            // Load saved zoom level from localStorage
-            const savedZoom = localStorage.getItem('pageZoom');
-            if (savedZoom) {
-                currentZoom = parseInt(savedZoom);
-                contentArea.style.zoom = currentZoom + '%';
+            if (contentArea) {
+                // Load saved zoom level from localStorage
+                const savedZoom = localStorage.getItem('awardsZoom');
+                if (savedZoom) {
+                    currentZoom = parseInt(savedZoom);
+                    contentArea.style.zoom = currentZoom + '%';
+                }
+                
+                zoomInBtn.addEventListener('click', function() {
+                    if (currentZoom < 200) {
+                        currentZoom += 10;
+                        contentArea.style.zoom = currentZoom + '%';
+                        localStorage.setItem('awardsZoom', currentZoom);
+                    }
+                });
+                
+                zoomOutBtn.addEventListener('click', function() {
+                    if (currentZoom > 50) {
+                        currentZoom -= 10;
+                        contentArea.style.zoom = currentZoom + '%';
+                        localStorage.setItem('awardsZoom', currentZoom);
+                    }
+                });
+            } else {
+                // Hide zoom controls if not on awards page
+                const zoomControls = document.getElementById('zoom-controls');
+                if (zoomControls) {
+                    zoomControls.style.display = 'none';
+                }
             }
-            
-            zoomInBtn.addEventListener('click', function() {
-                if (currentZoom < 200) {
-                    currentZoom += 10;
-                    contentArea.style.zoom = currentZoom + '%';
-                    localStorage.setItem('pageZoom', currentZoom);
-                }
-            });
-            
-            zoomOutBtn.addEventListener('click', function() {
-                if (currentZoom > 50) {
-                    currentZoom -= 10;
-                    contentArea.style.zoom = currentZoom + '%';
-                    localStorage.setItem('pageZoom', currentZoom);
-                }
-            });
         });
     </script>
 </body>

@@ -461,39 +461,12 @@
     </div>
     
     <script>
-        // Zoom functionality
+        // Hide zoom controls on non-awards pages
         document.addEventListener('DOMContentLoaded', function() {
-            const zoomInBtn = document.getElementById('zoom-in');
-            const zoomOutBtn = document.getElementById('zoom-out');
-            let currentZoom = 100;
-            
-            // Find the main content area
-            const contentArea = document.querySelector('#content-cv') || document.querySelector('.profile-right');
-            
-            if (!contentArea) return;
-            
-            // Load saved zoom level from localStorage
-            const savedZoom = localStorage.getItem('pageZoom');
-            if (savedZoom) {
-                currentZoom = parseInt(savedZoom);
-                contentArea.style.zoom = currentZoom + '%';
+            const zoomControls = document.getElementById('zoom-controls');
+            if (zoomControls) {
+                zoomControls.style.display = 'none';
             }
-            
-            zoomInBtn.addEventListener('click', function() {
-                if (currentZoom < 200) {
-                    currentZoom += 10;
-                    contentArea.style.zoom = currentZoom + '%';
-                    localStorage.setItem('pageZoom', currentZoom);
-                }
-            });
-            
-            zoomOutBtn.addEventListener('click', function() {
-                if (currentZoom > 50) {
-                    currentZoom -= 10;
-                    contentArea.style.zoom = currentZoom + '%';
-                    localStorage.setItem('pageZoom', currentZoom);
-                }
-            });
         });
     </script>
 </body>
