@@ -1042,42 +1042,44 @@ max-width: 100%;
 #zoom-controls {
     position: fixed !important;
     bottom: 20px !important;
-    left: 20px !important;
+    right: 20px !important;
     display: flex !important;
     flex-direction: row !important;
-    gap: 2px !important;
+    gap: 4px !important;
     z-index: 9999 !important;
-    background-color: #640807 !important;
-    padding: 4px !important;
-    border-radius: 4px !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
     visibility: visible !important;
     opacity: 1 !important;
 }
 
 #zoom-in,
 #zoom-out {
-    background-color: white !important;
+    background-color: rgba(255, 255, 255, 0.9) !important;
     color: #640807 !important;
-    border: none !important;
-    width: 40px !important;
-    height: 40px !important;
-    font-size: 28px !important;
+    border: 1px solid #ddd !important;
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 20px !important;
     font-weight: bold !important;
     cursor: pointer !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    border-radius: 3px !important;
+    border-radius: 4px !important;
     transition: background-color 0.2s ease !important;
     line-height: 1 !important;
     padding: 0 !important;
     margin: 0 !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
 }
 
 #zoom-in:hover,
 #zoom-out:hover {
-    background-color: #f0f0f0;
+    background-color: #f5f5f5 !important;
+    border-color: #640807 !important;
 }
 
 #zoom-in:active,
@@ -1087,15 +1089,15 @@ max-width: 100%;
 
 @media (max-width: 768px) {
     #zoom-controls {
-        bottom: 15px;
-        left: 15px;
+        bottom: 15px !important;
+        right: 15px !important;
     }
     
     #zoom-in,
     #zoom-out {
-        width: 36px !important;
-        height: 36px !important;
-        font-size: 24px !important;
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 18px !important;
     }
 }
 
@@ -1241,42 +1243,44 @@ max-width: 100%;
 #zoom-controls {
     position: fixed !important;
     bottom: 20px !important;
-    left: 20px !important;
+    right: 20px !important;
     display: flex !important;
     flex-direction: row !important;
-    gap: 2px !important;
+    gap: 4px !important;
     z-index: 9999 !important;
-    background-color: #640807 !important;
-    padding: 4px !important;
-    border-radius: 4px !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
     visibility: visible !important;
     opacity: 1 !important;
 }
 
 #zoom-in,
 #zoom-out {
-    background-color: white !important;
+    background-color: rgba(255, 255, 255, 0.9) !important;
     color: #640807 !important;
-    border: none !important;
-    width: 40px !important;
-    height: 40px !important;
-    font-size: 28px !important;
+    border: 1px solid #ddd !important;
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 20px !important;
     font-weight: bold !important;
     cursor: pointer !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    border-radius: 3px !important;
+    border-radius: 4px !important;
     transition: background-color 0.2s ease !important;
     line-height: 1 !important;
     padding: 0 !important;
     margin: 0 !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
 }
 
 #zoom-in:hover,
 #zoom-out:hover {
-    background-color: #f0f0f0;
+    background-color: #f5f5f5 !important;
+    border-color: #640807 !important;
 }
 
 #zoom-in:active,
@@ -1286,14 +1290,14 @@ max-width: 100%;
 
 @media (max-width: 768px) {
     #zoom-controls {
-        bottom: 15px;
-        left: 15px;
+        bottom: 15px !important;
+        right: 15px !important;
     }
     
     #zoom-in,
     #zoom-out {
-        width: 36px !important;
-        height: 36px !important;
-        font-size: 24px !important;
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 18px !important;
     }
 }
